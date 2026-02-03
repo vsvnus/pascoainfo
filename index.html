@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubra como faturar de R$1.000 a R$5.000 vendendo ovos de Páscoa artesanais. Método Chocolate Dourado™">
+    <meta property="og:title" content="Método Chocolate Dourado™ - Fature até R$5.000 na Páscoa">
+    <meta property="og:description"
+        content="Descubra seu potencial de lucro vendendo ovos de Páscoa artesanais. Quiz gratuito de 2 minutos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz-result.css">
+    <title>Fórmula Chocolate & Lucro™ | Fature de R$1.000 a R$5.000 na Páscoa</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2195690767928907');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2195690767928907&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <div class="bg-decoration">
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+        <div class="bg-blob bg-blob-3"></div>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <img src="assets/logo_formula.png" alt="Fórmula Chocolate & Lucro - Logo" class="hero-logo">
+                <h1 class="hero-headline">
+                    Descubra a Fórmula Belga que Está Transformando Cozinhas de Mulheres Brasileiras em Verdadeiras
+                    <span class="highlight">Fábricas de Dinheiro</span> na Páscoa
+                </h1>
+                <p class="hero-subheadline">
+                    A Fórmula que Transformou milhares de lares, agora disponível para você, clique no botão para
+                    verificar se o seu perfil atende aos requisitos.
+                </p>
+                <button class="btn btn-primary btn-hero" data-action="open-quiz">
+                    <span>Descobrir Meu Potencial de Lucro</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+                <div class="hero-badges">
+                    <div class="badge"><i class="ph ph-clock"></i><span>Quiz gratuito • 2 minutos</span></div>
+                    <div class="badge"><i class="ph ph-shield-check"></i><span>Resultado personalizado</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container tilt-effect">
+                    <img src="assets/hero_egg.png" alt="Ovo de Páscoa Gourmet com recheio cremoso"
+                        class="hero-main-img">
+                    <div class="hero-floating-stat glass-card">
+                        <span class="stat-value">R$ 3.200</span>
+                        <span class="stat-label">Lucro Médio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA DESBLOQUEADA (Aparece após o Quiz) -->
+    <section id="oferta-desbloqueada" class="hidden section-oferta-desbloqueada">
+        <div class="container">
+            <div class="result-container-new">
+
+                <!-- 1. HEADLINE PERSONALIZADA -->
+                <div class="result-hero">
+                    <span class="result-badge-small">✨ ANÁLISE CONCLUÍDA</span>
+                    <h1 class="result-headline-personal" id="result-headline-personal">
+                        Ana, mãe de 2, que trabalha CLT e tem 2h por dia...
+                    </h1>
+                    <p class="result-subtext">Este é o seu cenário real para a Páscoa 2026:</p>
+                </div>
+
+                <!-- 2. O NÚMERO MÁGICO -->
+                <div class="result-magic-number glass-card">
+                    <div class="magic-number-header">
+                        <span class="magic-label">Seu Potencial de Faturamento</span>
+                        <div class="magic-value-range">
+                            <span class="magic-value" id="result-min-new">R$ 3.800</span>
+                            <span class="magic-separator">a</span>
+                            <span class="magic-value" id="result-max-new">R$ 5.200</span>
+                        </div>
+                        <span class="magic-context" id="magic-context">trabalhando 2h por dia na Páscoa</span>
+                    </div>
+
+                    <div class="magic-math">
+                        <h4>📊 Como chegamos nesse número:</h4>
+                        <div class="math-steps">
+                            <div class="math-step">
+                                <i class="ph ph-clock"></i>
+                                <div>
+                                    <strong id="math-production">Com 2h/dia você faz ~4 ovos</strong>
+                                    <span>Tempo realista de produção focada</span>
+                                </div>
+                            </div>
+                            <div class="math-step">
+                                <i class="ph ph-calendar"></i>
+                                <div>
+                                    <strong id="math-total">Em 30 dias = 120 ovos produzidos</strong>
+                                    <span>Escala gradual e sustentável</span>
+                                </div>
+                            </div>
+                            <div class="math-step">
+                                <i class="ph ph-currency-dollar"></i>
+                                <div>
+                                    <strong id="math-profit">A R$ 35 de lucro cada = R$ 4.200</strong>
+                                    <span>Baseado no preço médio da sua região</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. SEU PERFIL (VALIDAÇÃO) -->
+                <div class="result-profile-validation glass-card">
+                    <div class="profile-icon">
+                        <i class="ph ph-user-circle-check"></i>
+                    </div>
+                    <h3>Seu Perfil</h3>
+                    <p class="profile-validation-text" id="profile-validation-text">
+                        Você está no grupo que mais cresce — iniciantes têm 34% mais chances de seguir o método certinho
+                    </p>
+                    <div class="profile-badges">
+                        <div class="profile-badge" id="profile-badge-1">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Rotina organizada</span>
+                        </div>
+                        <div class="profile-badge" id="profile-badge-2">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Foco em resultado</span>
+                        </div>
+                        <div class="profile-badge" id="profile-badge-3">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Mindset de crescimento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. MAIOR DESAFIO + QUEBRA -->
+                <div class="result-objection-breaker glass-card">
+                    <div class="objection-header">
+                        <i class="ph ph-shield-warning"></i>
+                        <h3>Seu maior desafio (e como vamos resolver)</h3>
+                    </div>
+                    <div class="objection-content">
+                        <div class="objection-fear" id="objection-fear">
+                            <strong>"E se não vender?"</strong>
+                        </div>
+                        <div class="objection-answer" id="objection-answer">
+                            <div class="answer-stat">
+                                <span class="stat-big">83%</span>
+                                <span class="stat-label">das alunas fazem a primeira venda em 7 dias</span>
+                            </div>
+                            <p id="objection-explanation">
+                                O método inclui scripts de pré-venda testados. Você vende ANTES de produzir, eliminando
+                                o risco de sobrar produto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-divider">
+                    <span>•••</span>
+                </div>
+
+                <!-- 5. TRANSIÇÃO PRO PRODUTO -->
+                <div class="result-transition">
+                    <p class="transition-text">
+                        <span id="user-name-transition">Ana</span>, pra você sair do <strong>potencial</strong> e ir pra
+                        <strong>prática</strong>, eu criei o:
+                    </p>
+                    <img src="assets/logo_formula.png" alt="Fórmula Chocolate & Lucro" class="result-product-logo">
+                    <p class="product-tagline">
+                        A fórmula de <strong>7 passos</strong> pra fazer seu primeiro ovo profissional ainda essa semana
+                        — mesmo que nunca tenha derretido chocolate na vida.
+                    </p>
+                </div>
+
+                <!-- 6. OFERTA CLARA E RÁPIDA -->
+                <div class="result-offer-final glass-card">
+                    <h3 class="offer-title-simple">O que você recebe hoje:</h3>
+
+                    <ul class="offer-bullets-clean">
+                        <li><i class="ph ph-check-circle"></i>12 Receitas Passo-a-Passo com Custo e Precificação</li>
+                        <li><i class="ph ph-check-circle"></i>Scripts de Vendas Prontos (WhatsApp + Instagram)</li>
+                        <li><i class="ph ph-check-circle"></i>Calculadora Automática de Lucro</li>
+                        <li><i class="ph ph-check-circle"></i>Cronograma de Produção sem Caos</li>
+                        <li><i class="ph ph-check-circle"></i>Suporte Online 24/7</li>
+                    </ul>
+
+                    <div class="offer-price-simple">
+                        <div class="price-strike">De <s>R$ 97,90</s> por:</div>
+                        <div class="price-highlight">
+                            <span class="price-installment">3x de R$ 9,67</span>
+                            <span class="price-cash-alt">ou R$ 27 à vista</span>
+                        </div>
+                    </div>
+
+                    <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI" class="btn btn-primary btn-mega-cta"
+                        id="btn-checkout-final">
+                        <span>QUERO ACESSAR O MÉTODO AGORA</span>
+                        <i class="ph ph-lock-key"></i>
+                    </a>
+
+                    <div class="guarantee-simple">
+                        <i class="ph ph-shield-check"></i>
+                        <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                    </div>
+                </div>
+
+                <!-- EXPERT (MANTENDO) -->
+                <!-- Nova Seção de História da Expert -->
+                <div class="result-divider">✦</div>
+
+                <div class="expert-story-full">
+                    <div class="expert-story-img">
+                        <img src="assets/gaby_profile.png" alt="Gaby Bitencourt na cozinha" class="img-gaby-hero">
+                        <div class="expert-years-badge">
+                            <span class="bad-num">12+</span>
+                            <span class="bad-txt">Anos<br>Ensinando</span>
+                        </div>
+                    </div>
+
+                    <div class="expert-story-content">
+                        <span class="story-label">QUEM CRIOU A FÓRMULA?</span>
+                        <h3>Da Bélgica para a cozinha da Gaby: O segredo de 3 gerações</h3>
+
+                        <p>
+                            Tudo começou com minha avó, que morou anos na <strong>Bélgica 🇧🇪</strong> (o país do
+                            chocolate). Lá, ela viu como mulheres comuns sustentavam famílias inteiras produzindo
+                            chocolate em casa, mas com um detalhe: elas tinham uma <em>organização militar</em>,
+                            diferente da bagunça que vemos por aqui.
+                        </p>
+
+                        <p>
+                            Ela trouxe essa "fórmula de produção" pro Brasil e ensinou pra minha mãe. E foi minha mãe
+                            quem me salvou no meu pior momento: <strong>recém-separada, com 2 filhos pequenos e zero
+                                renda.</strong>
+                        </p>
+
+                        <p class="story-highlight">
+                            "Eu não tinha dinheiro pra errar. Apliquei o método da vovó e, na minha primeira Páscoa,
+                            paguei todas as dívidas e ainda sobrou pra mobiliar a casa."
+                        </p>
+
+                        <p>
+                            Hoje, 12 anos depois, eu não vendo apenas ovos: eu ensino mulheres a copiarem esse mesmo
+                            modelo de negócio enxuto, seguro e altamente lucrativo.
+                        </p>
+
+                        <p class="expert-signature">Gaby Bitencourt</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="section-problema">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">A realidade de muitas mulheres</span>
+                <h2 class="section-title">Você se identifica com alguma dessas situações?</h2>
+            </div>
+            <div class="problema-grid">
+                <div class="problema-card glass-card">
+                    <div class="problema-img-wrapper">
+                        <img src="assets/pain_money.png" alt="Dificuldade financeira" loading="lazy">
+                    </div>
+                    <h3>O dinheiro nunca sobra</h3>
+                    <p>Trabalha o mês inteiro, mas no fim as contas sempre apertam.</p>
+                </div>
+                <div class="problema-card glass-card">
+                    <div class="problema-img-wrapper">
+                        <img src="assets/pain_time.png" alt="Falta de tempo e rotina corrida" loading="lazy">
+                    </div>
+                    <h3>Tempo escasso</h3>
+                    <p>Entre trabalho, casa e filhos, sobra tão pouco tempo.</p>
+                </div>
+                <div class="problema-card glass-card">
+                    <div class="problema-img-wrapper">
+                        <img src="assets/pain_talent.png" alt="Mãos talentosas paradas" loading="lazy">
+                    </div>
+                    <h3>Talento desperdiçado</h3>
+                    <p>Você tem habilidade manual mas nunca monetizou.</p>
+                </div>
+                <div class="problema-card glass-card">
+                    <div class="problema-img-wrapper">
+                        <img src="assets/pain_fail.png" alt="Projetos inacabados" loading="lazy">
+                    </div>
+                    <h3>Frustrações passadas</h3>
+                    <p>Já tentou outras coisas e não deu certo.</p>
+                </div>
+            </div>
+            <div class="problema-validation glass-card">
+                <div class="validation-content">
+                    <i class="ph ph-hand-heart"></i>
+                    <p>Se você se identificou, saiba que <strong>você não está sozinha</strong> — e existe um caminho
+                        real
+                        para mudar isso.</p>
+                </div>
+                <button class="btn btn-primary" data-action="open-quiz" style="margin-top: 1rem;">
+                    <span>Quero Verificar Minha Elegibilidade</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA (DESEJO) -->
+    <section id="galeria" class="section-galeria">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">O que você vai aprender</span>
+                <h2 class="section-title">Imagine você produzindo essas maravilhas...</h2>
+                <p class="section-subtitle">São mais de 12 tipos de ovos gourmet, de colher e trufados que vendem igual
+                    água.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Item 1: Nutella (Campeão) -->
+                <div class="gallery-item glass-card tilt-effect">
+                    <img src="assets/ovo_nutella.png" alt="Ovo de Colher com Nutella cremosa" loading="lazy">
+                    <div class="gallery-caption">
+                        <span>Ovo Supreme Nutella</span>
+                        <div class="gallery-price-tag">Venda: R$ 95,00</div>
+                    </div>
+                </div>
+                <!-- Item 2: Madeira (Premium) -->
+                <div class="gallery-item glass-card tilt-effect">
+                    <img src="assets/ovo_madeira.jpg" alt="Ovo de Colher em caixa de madeira rústica" loading="lazy">
+                    <div class="gallery-caption">
+                        <span>Ovo Rústico Deluxe</span>
+                        <div class="gallery-price-tag">Venda: R$ 130,00</div>
+                    </div>
+                </div>
+                <!-- Item 3: Quarteto (Ex-Trio) -->
+                <div class="gallery-item glass-card tilt-effect">
+                    <img src="assets/ovo_trio.png" alt="Quarteto de Ovos de Colher Gourmet" loading="lazy">
+                    <div class="gallery-caption">
+                        <span>Quarteto Degustação</span>
+                        <div class="gallery-price-tag">Venda: R$ 145,00</div>
+                    </div>
+                </div>
+                <!-- Item 4: Kraft (Artesanal) -->
+                <div class="gallery-item glass-card tilt-effect">
+                    <img src="assets/ovo_kraft.jpg" alt="Ovo de Colher em caixa kraft com laço" loading="lazy">
+                    <div class="gallery-caption">
+                        <span>Colher Artesanal</span>
+                        <div class="gallery-price-tag">Venda: R$ 110,00</div>
+                    </div>
+                </div>
+                <!-- Item 5: Kids (Colorido) -->
+                <div class="gallery-item glass-card tilt-effect">
+                    <img src="assets/ovo_colorido.jpg" alt="Ovo de páscoa colorido em caixa transparente"
+                        loading="lazy">
+                    <div class="gallery-caption">
+                        <span>Ovo Kids Confete</span>
+                        <div class="gallery-price-tag">Venda: R$ 95,00</div>
+                    </div>
+                </div>
+                <!-- Item 6: Clássico (Entrada) -->
+                <div class="gallery-item glass-card tilt-effect">
+                    <img src="assets/ovo_classico.jpg" alt="Ovo de páscoa clássico embalado para presente"
+                        loading="lazy">
+                    <div class="gallery-caption">
+                        <span>Clássico Presente</span>
+                        <div class="gallery-price-tag">Venda: R$ 98,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-cta">
+                <p>E o melhor: você não precisa de equipamentos caros.</p>
+                <button class="btn btn-primary" data-action="open-quiz">
+                    <span>Quero aprender a fazer</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDIBILIDADE -->
+    <section id="credibilidade" class="section-credibilidade">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projeções de Mercado 2026</span>
+                <h2 class="section-title">Por que 2026 será o ano mais lucrativo da história para ovos caseiros</h2>
+            </div>
+            <div class="news-grid news-grid-expanded">
+                <!-- Notícia 1: Otimismo Geral -->
+                <div class="news-card glass-card">
+                    <div class="news-source"><i class="ph ph-trend-up"></i><span>CNN ECONOMIA • Projeção 2026</span>
+                    </div>
+                    <h3 class="news-headline">"Páscoa de 2026 promete ser a maior da década em volume de vendas"</h3>
+                    <p class="news-excerpt">Especialistas apontam retomada do poder de compra e busca recorde por
+                        presentes.</p>
+                </div>
+                <!-- Notícia 2: Artesanal vs Industrial -->
+                <div class="news-card glass-card">
+                    <div class="news-source"><i class="ph ph-chart-bar"></i><span>FORBES MONEY</span></div>
+                    <h3 class="news-headline">Ovos Artesanais já superam vendas de grandes marcas em 45%</h3>
+                    <p class="news-excerpt">Consumidor está trocando o industrializado pelo "feito à mão" e exclusivo.
+                    </p>
+                </div>
+                <!-- Notícia 3: Lucro/Ticket Médio -->
+                <div class="news-card glass-card">
+                    <div class="news-source"><i class="ph ph-currency-dollar"></i><span>VALOR ECONÔMICO</span></div>
+                    <h3 class="news-headline">Ticket médio do ovo gourmet deve bater R$ 95,00 em 2026</h3>
+                    <p class="news-excerpt">Margem de lucro para produtores caseiros pode chegar a 300% este ano.</p>
+                </div>
+                <!-- Notícia 4: Baixo Investimento (Sebrae) -->
+                <div class="news-card glass-card">
+                    <div class="news-source"><i class="ph ph-briefcase"></i><span>REVISTA PEGN</span></div>
+                    <h3 class="news-headline">Confeitaria em casa vira principal fonte de renda para 70 mil famílias
+                    </h3>
+                    <p class="news-excerpt">Setor é o que exige menor investimento inicial para começar a faturar
+                        rápido.</p>
+                </div>
+                <!-- Notícia 5: Falta de Profissionais -->
+                <div class="news-card glass-card">
+                    <div class="news-source"><i class="ph ph-warning"></i><span>G1 MERCADO</span></div>
+                    <h3 class="news-headline">"Falta quem faça": Demanda por Ovos de Colher supera oferta em 2025</h3>
+                    <p class="news-excerpt">Quem se profissionalizar agora vai nadar de braçada em 2026.</p>
+                </div>
+                <!-- Notícia 6: Oportunidade Agora -->
+                <div class="news-card glass-card">
+                    <div class="news-source"><i class="ph ph-calendar-check"></i><span>EXAME INVEST</span></div>
+                    <h3 class="news-headline">Por que começar a se preparar 3 meses antes é decisivo</h3>
+                    <p class="news-excerpt">Quem inicia os testes e divulgação agora vende até 5x mais na semana santa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÃO -->
+    <section id="solucao" class="section-solucao">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">A solução</span>
+                <h2 class="section-title">Conheça a Fórmula Chocolate & Lucro™</h2>
+                <p class="section-subtitle">O sistema completo para você faturar de R$1.000 a R$5.000 vendendo ovos
+                    artesanais.</p>
+            </div>
+            <div class="metodo-grid">
+                <div class="metodo-card glass-card">
+                    <div class="metodo-number">01</div>
+                    <div class="metodo-icon"><i class="ph ph-book-open-text"></i></div>
+                    <h3>Receitas Lucrativas</h3>
+                    <p>12 receitas testadas que custam pouco e ficam deliciosas.</p>
+                </div>
+                <div class="metodo-card glass-card">
+                    <div class="metodo-number">02</div>
+                    <div class="metodo-icon"><i class="ph ph-calculator"></i></div>
+                    <h3>Precificação Inteligente</h3>
+                    <p>Planilha pronta para garantir 200% de lucro em cada ovo.</p>
+                </div>
+                <div class="metodo-card glass-card">
+                    <div class="metodo-number">03</div>
+                    <div class="metodo-icon"><i class="ph ph-megaphone"></i></div>
+                    <h3>Estratégia de Vendas</h3>
+                    <p>Scripts prontos para WhatsApp e Instagram.</p>
+                </div>
+            </div>
+            <div class="metodo-cta">
+                <button class="btn btn-primary" data-action="open-quiz">
+                    <span>Quero Verificar Minha Elegibilidade</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="section-depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Histórias reais</span>
+                <h2 class="section-title">Mulheres como você que já transformaram sua Páscoa</h2>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card glass-card">
+                    <div class="depoimento-header">
+                        <img src="https://i.pravatar.cc/64?img=5" alt="Carla" class="depoimento-avatar">
+                        <div class="depoimento-info">
+                            <h4>Carla Mendes</h4><span>Belo Horizonte, MG</span>
+                        </div>
+                        <div class="depoimento-result"><span class="result-value">R$ 4.800</span><span
+                                class="result-label">em 3 semanas</span></div>
+                    </div>
+                    <blockquote>"Meu marido duvidou quando disse que ia vender ovo 😅 Quando mostrei o dinheiro na
+                        conta, ele ficou sem palavras. Pela primeira vez não precisei pedir nada pra ninguém."
+                    </blockquote>
+                    <div class="depoimento-badge"><i class="ph ph-briefcase"></i><span>Trabalha 8h/dia</span></div>
+                </div>
+                <div class="depoimento-card glass-card">
+                    <div class="depoimento-header">
+                        <img src="https://i.pravatar.cc/64?img=9" alt="Juliana" class="depoimento-avatar">
+                        <div class="depoimento-info">
+                            <h4>Juliana Costa</h4><span>São Paulo, SP</span>
+                        </div>
+                        <div class="depoimento-result"><span class="result-value">R$ 2.300</span><span
+                                class="result-label">primeira Páscoa</span></div>
+                    </div>
+                    <blockquote>"Gente, eu NUNCA tinha feito nada na cozinha além de comida básica 🍫 Queimei chocolate
+                        3x no começo kkk mas o passo a passo é tão detalhado que no 4º já saiu perfeito!"</blockquote>
+                    <div class="depoimento-badge"><i class="ph ph-star"></i><span>Zero experiência</span></div>
+                </div>
+                <div class="depoimento-card glass-card">
+                    <div class="depoimento-header">
+                        <img src="https://i.pravatar.cc/64?img=16" alt="Amanda" class="depoimento-avatar">
+                        <div class="depoimento-info">
+                            <h4>Amanda Oliveira</h4><span>Curitiba, PR</span>
+                        </div>
+                        <div class="depoimento-result"><span class="result-value">R$ 5.200</span><span
+                                class="result-label">recorde pessoal</span></div>
+                    </div>
+                    <blockquote>"Fazia tudo com as crianças dormindo 🌙 Era 22h e eu lá temperando chocolate. Cansativo?
+                        Sim. Mas pela primeira vez levei meus filhos pra praia sem parcelar nada. Valeu cada noite!"
+                    </blockquote>
+                    <div class="depoimento-badge"><i class="ph ph-baby"></i><span>Mãe de 2</span></div>
+                </div>
+                <div class="depoimento-card glass-card">
+                    <div class="depoimento-header">
+                        <img src="https://i.pravatar.cc/64?img=23" alt="Fernanda" class="depoimento-avatar">
+                        <div class="depoimento-info">
+                            <h4>Fernanda Lima</h4><span>Recife, PE</span>
+                        </div>
+                        <div class="depoimento-result"><span class="result-value">R$ 3.100</span><span
+                                class="result-label">investindo R$150</span></div>
+                    </div>
+                    <blockquote>"Tava há 8 meses sem emprego e já não sabia mais o que fazer 😢 Peguei R$150 emprestado
+                        com minha mãe. Devolvi em 1 semana e ainda sobrou pra pagar 2 contas atrasadas!"</blockquote>
+                    <div class="depoimento-badge"><i class="ph ph-coin"></i><span>Investimento mínimo</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECUNDÁRIO -->
+    <section id="cta-secundario" class="section-cta-secundario">
+        <div class="container">
+            <div class="cta-box glass-card">
+                <div class="cta-content">
+                    <h2>Verifique se seu perfil é compatível com a Fórmula</h2>
+                    <p>Faça a análise de elegibilidade gratuita e receba sua projeção de lucro para 2026.</p>
+                </div>
+                <button class="btn btn-primary btn-large" data-action="open-quiz">
+                    <span>Verificar Minha Elegibilidade</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Dúvidas frequentes</span>
+                <h2 class="section-title">Perguntas que você pode estar se fazendo</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Nunca fiz chocolate antes. Consigo aprender?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Com certeza! Todas as receitas têm passo a passo detalhado com fotos.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Quanto preciso investir para começar?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode começar com R$100 a R$200 em materiais básicos.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Trabalho o dia todo. Terei tempo?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Você pode dedicar apenas algumas horas nos fins de semana.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>E se eu não conseguir vender?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O guia inclui scripts de vendas testados + 7 dias de garantia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <h3
+                    style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">
+                    Fórmula Chocolate & Lucro™</h3>
+                <p>Transformando talento em renda extra desde 2021</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="mailto:contato@metodochocolatedourado.com.br">Contato</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Fórmula Chocolate & Lucro™. Todos os direitos reservados.</p>
+                <p class="footer-disclaimer">Este produto não garante a obtenção de resultados. Qualquer referência ao
+                    desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- QUIZ MODAL -->
+    <div id="quiz-modal" class="quiz-modal" aria-hidden="true">
+        <div class="quiz-overlay"></div>
+        <div class="quiz-container glass-card">
+            <button class="quiz-close hidden" aria-label="Fechar quiz">
+                <i class="ph ph-x"></i>
+            </button>
+
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="quiz-progress-text">Etapa 1 de 8</span>
+            </div>
+
+            <div class="quiz-content">
+                <!-- Tela 1: Abertura com Nome -->
+                <div class="quiz-screen active" data-screen="1">
+                    <div class="quiz-screen-content">
+                        <div class="quiz-intro-icon"><i class="ph ph-clipboard-text"></i></div>
+                        <h2 class="quiz-headline">Vamos analisar se o seu perfil atende aos requisitos da Fórmula?</h2>
+                        <p class="quiz-subheadline">Responda algumas perguntas rápidas para verificarmos se você tem o
+                            perfil ideal para aplicar a fórmula e lucrar nesta Páscoa.</p>
+                        <div class="form-group">
+                            <label for="quiz-name-input">Para iniciar a análise, qual é o seu nome?</label>
+                            <input type="text" id="quiz-name-input" placeholder="Digite seu primeiro nome" required>
+                        </div>
+                        <button class="btn btn-primary btn-quiz-start" id="btn-start-quiz">
+                            <span>Verificar Minha Elegibilidade</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                        <div class="quiz-social-proof">
+                            <i class="ph ph-lock-key"></i>
+                            <span>Análise segura e confidencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 2: Você tem filhos? -->
+                <div class="quiz-screen" data-screen="2">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Sobre você</span>
+                        <h2 class="quiz-question"><span class="user-name">Maria</span>, você tem filhos?</h2>
+                        <p class="quiz-question-sub">Isso nos ajuda a entender melhor sua rotina</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="filhos" data-value="nao" data-next="3">
+                                <i class="ph ph-user"></i>
+                                <span>Não tenho filhos 🙌</span>
+                            </button>
+                            <button class="quiz-option" data-key="filhos" data-value="1" data-next="3">
+                                <i class="ph ph-baby"></i>
+                                <span>Tenho 1 filho(a) 👶</span>
+                            </button>
+                            <button class="quiz-option" data-key="filhos" data-value="2-3" data-next="3">
+                                <i class="ph ph-users"></i>
+                                <span>Tenho 2 a 3 filhos 👨‍👩‍👧‍👦</span>
+                            </button>
+                            <button class="quiz-option" data-key="filhos" data-value="4+" data-next="3">
+                                <i class="ph ph-users-three"></i>
+                                <span>Tenho 4 ou mais 👪</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 3: Trabalho -->
+                <div class="quiz-screen" data-screen="3">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Sua rotina</span>
+                        <h2 class="quiz-question">Qual é sua situação de trabalho atual?</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="trabalho" data-value="clt" data-next="4">
+                                <i class="ph ph-briefcase"></i>
+                                <span>Trabalho CLT / Empregada 💼</span>
+                            </button>
+                            <button class="quiz-option" data-key="trabalho" data-value="autonoma" data-next="4">
+                                <i class="ph ph-storefront"></i>
+                                <span>Sou autônoma / Tenho negócio 💪</span>
+                            </button>
+                            <button class="quiz-option" data-key="trabalho" data-value="dona-casa" data-next="4">
+                                <i class="ph ph-house"></i>
+                                <span>Sou dona de casa 🏡</span>
+                            </button>
+                            <button class="quiz-option" data-key="trabalho" data-value="desempregada" data-next="4">
+                                <i class="ph ph-magnifying-glass"></i>
+                                <span>Buscando oportunidades 🔍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 4: Renda Mensal -->
+                <div class="quiz-screen" data-screen="4">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Sua realidade financeira</span>
+                        <h2 class="quiz-question">Qual sua renda familiar mensal hoje?</h2>
+                        <p class="quiz-question-sub">Não se preocupe, isso é 100% confidencial</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="renda" data-value="ate1500" data-next="5">
+                                <i class="ph ph-wallet"></i>
+                                <span>Até R$ 1.500</span>
+                            </button>
+                            <button class="quiz-option" data-key="renda" data-value="1500-3000" data-next="5">
+                                <i class="ph ph-wallet"></i>
+                                <span>R$ 1.500 a R$ 3.000</span>
+                            </button>
+                            <button class="quiz-option" data-key="renda" data-value="3000-5000" data-next="5">
+                                <i class="ph ph-wallet"></i>
+                                <span>R$ 3.000 a R$ 5.000</span>
+                            </button>
+                            <button class="quiz-option" data-key="renda" data-value="5000+" data-next="5">
+                                <i class="ph ph-wallet"></i>
+                                <span>Acima de R$ 5.000</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 5: Onde Você Mora (NOVA) -->
+                <div class="quiz-screen" data-screen="5">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Sua localização</span>
+                        <h2 class="quiz-question">Onde você mora?</h2>
+                        <p class="quiz-question-sub">Isso nos ajuda a entender o mercado da sua região</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="cidade" data-value="capital" data-next="6">
+                                <i class="ph ph-buildings"></i>
+                                <span>Capital ou região metropolitana 🏙️</span>
+                            </button>
+                            <button class="quiz-option" data-key="cidade" data-value="grande" data-next="6">
+                                <i class="ph ph-city"></i>
+                                <span>Cidade grande (> 200 mil hab.) 🌆</span>
+                            </button>
+                            <button class="quiz-option" data-key="cidade" data-value="media" data-next="6">
+                                <i class="ph ph-house-line"></i>
+                                <span>Cidade média (50-200 mil hab.) 🏘️</span>
+                            </button>
+                            <button class="quiz-option" data-key="cidade" data-value="pequena" data-next="6">
+                                <i class="ph ph-tree"></i>
+                                <span>Cidade pequena ou interior (< 50 mil) 🌳</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 6: Validação de Localização (NOVA) -->
+                <div class="quiz-screen" data-screen="6">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-validation-icon"><i class="ph ph-map-pin"></i></div>
+                        <h2 class="quiz-validation-title" id="city-validation-title">Excelente localização, <span
+                                class="user-name">Maria</span>!</h2>
+                        <div class="quiz-data-card glass-card">
+                            <p class="quiz-data-text" id="city-validation-text">Sua região tem um potencial incrível
+                                para vendas de ovos artesanais.</p>
+                        </div>
+                        <div class="quiz-testimonial-mini" id="city-testimonial">
+                            <img src="https://i.pravatar.cc/40?img=25" alt="Depoimento" class="testimonial-avatar-mini">
+                            <p>"Minha cidade é pequena, mas isso foi minha vantagem. Virei referência rapidinho!"</p>
+                            <span>— Sandra M., Interior de MG</span>
+                        </div>
+                        <button class="btn btn-primary" data-next="7">
+                            <span>Perfeito! Ver oportunidades</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 7: Carrossel de Notícias (era Tela 5) -->
+                <div class="quiz-screen" data-screen="7">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-validation-icon"><i class="ph ph-newspaper"></i></div>
+                        <h2 class="quiz-validation-title"><span class="user-name">Maria</span>, olha o que está
+                            acontecendo...</h2>
+
+                        <div class="news-carousel">
+                            <div class="news-carousel-track">
+                                <div class="news-slide glass-card">
+                                    <div class="news-source"><i class="ph ph-chart-line-up"></i><span>ABICAB 2025</span>
+                                    </div>
+                                    <h3>Mercado de ovos artesanais cresce 340%</h3>
+                                    <p>Consumidores pagam até 3x mais por produtos personalizados e artesanais.
+                                    </p>
+                                </div>
+                                <div class="news-slide glass-card">
+                                    <div class="news-source"><i class="ph ph-newspaper"></i><span>G1 Economia •
+                                            2025</span>
+                                    </div>
+                                    <h3>Páscoa 2025 bate novo recorde de vendas</h3>
+                                    <p>Ovos artesanais ultrapassam industrializados. Projeção para 2026 é ainda maior.
+                                    </p>
+                                </div>
+                                <div class="news-slide glass-card">
+                                    <div class="news-source"><i class="ph ph-trend-up"></i><span>SEBRAE 2025</span>
+                                    </div>
+                                    <h3>92% das confeiteiras querem expandir negócio</h3>
+                                    <p>Pesquisa revela que renda extra mudou a vida financeira de milhares de mulheres.
+                                    </p>
+                                </div>
+                                <div class="news-slide glass-card">
+                                    <div class="news-source"><i class="ph ph-currency-dollar"></i><span>FORBES
+                                            Money</span>
+                                    </div>
+                                    <h3>Ticket médio do ovo gourmet atinge R$95</h3>
+                                    <p>Margem de lucro para produtores caseiros pode passar de 300% em 2026.
+                                    </p>
+                                </div>
+                                <div class="news-slide glass-card">
+                                    <div class="news-source"><i class="ph ph-storefront"></i><span>VALOR
+                                            Econômico</span>
+                                    </div>
+                                    <h3>Confeitaria caseira vira negócio de milhões</h3>
+                                    <p>Setor movimenta R$ 2,8 bilhões e cresce 25% ao ano no Brasil.
+                                    </p>
+                                </div>
+                                <div class="news-slide glass-card">
+                                    <div class="news-source"><i class="ph ph-warning-circle"></i><span>CNN Brasil •
+                                            2026</span>
+                                    </div>
+                                    <h3>Demanda por ovos artesanais supera oferta</h3>
+                                    <p>Especialistas alertam: quem se preparar agora terá vantagem competitiva.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="news-carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <p class="swipe-hint"><i class="ph ph-arrows-left-right"></i> Arraste para ver mais</p>
+                        </div>
+
+                        <button class="btn btn-primary" data-next="8">
+                            <span>Incrível! Quero continuar</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 8: Tempo Disponível (era Tela 6) -->
+                <div class="quiz-screen" data-screen="8">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Sua disponibilidade</span>
+                        <h2 class="quiz-question">Quanto tempo por dia você teria para se dedicar?</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="tempo" data-value="menos1h" data-next="9">
+                                <i class="ph ph-hourglass-low"></i>
+                                <span>Menos de 1 hora ⏰</span>
+                            </button>
+                            <button class="quiz-option" data-key="tempo" data-value="1a2h" data-next="9">
+                                <i class="ph ph-hourglass-medium"></i>
+                                <span>1 a 2 horas ☕</span>
+                            </button>
+                            <button class="quiz-option" data-key="tempo" data-value="2a4h" data-next="9">
+                                <i class="ph ph-hourglass-high"></i>
+                                <span>2 a 4 horas 💪</span>
+                            </button>
+                            <button class="quiz-option" data-key="tempo" data-value="mais4h" data-next="9">
+                                <i class="ph ph-hourglass"></i>
+                                <span>Mais de 4 horas 🚀</span>
+                            </button>
+                        </div>
+                        <p class="quiz-hint">Não se preocupe — mesmo com pouco tempo dá pra ter resultados!</p>
+                    </div>
+                </div>
+
+                <!-- Tela 9: Validação Personalizada (era Tela 7) -->
+                <div class="quiz-screen" data-screen="9">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-validation-icon"><i class="ph ph-check-circle"></i></div>
+                        <h2 class="quiz-validation-title" id="validation-title">Perfeito, <span
+                                class="user-name">Maria</span>!</h2>
+                        <div class="quiz-data-card glass-card">
+                            <p class="quiz-data-text" id="validation-text">Mesmo com sua rotina, o método foi feito pra
+                                funcionar na sua realidade.</p>
+                        </div>
+                        <div class="quiz-testimonial-mini" id="validation-testimonial">
+                            <img src="https://i.pravatar.cc/40?img=32" alt="Depoimento" class="testimonial-avatar-mini">
+                            <p>"Também trabalho fora e tenho filhos. No começo duvidei, mas consegui fazer R$2.800!"</p>
+                            <span>— Patrícia R., Campinas</span>
+                        </div>
+                        <button class="btn btn-primary" data-next="10">
+                            <span>Faz sentido! Próximo passo</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 10: Experiência com Doces (era Tela 8) -->
+                <div class="quiz-screen" data-screen="10">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Sua experiência</span>
+                        <h2 class="quiz-question">Qual seu nível de experiência com doces?</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="experiencia" data-value="zero" data-next="11">
+                                <i class="ph ph-prohibit"></i>
+                                <span>Zero, nunca fiz nada 😅</span>
+                            </button>
+                            <button class="quiz-option" data-key="experiencia" data-value="familia" data-next="11">
+                                <i class="ph ph-house"></i>
+                                <span>Faço pra família às vezes 🍰</span>
+                            </button>
+                            <button class="quiz-option" data-key="experiencia" data-value="informal" data-next="11">
+                                <i class="ph ph-hand-coins"></i>
+                                <span>Já vendi informalmente 💰</span>
+                            </button>
+                            <button class="quiz-option" data-key="experiencia" data-value="experiente" data-next="11">
+                                <i class="ph ph-medal"></i>
+                                <span>Tenho experiência e já vendo 🏆</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 11: VOCÊ SABIA #1 - Lucro sem Experiência -->
+                <div class="quiz-screen" data-screen="11">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-surprise-icon"><i class="ph ph-currency-dollar"></i></div>
+                        <h2 class="quiz-validation-title">Você sabia, <span class="user-name">Maria</span>?</h2>
+                        <div class="quiz-data-card glass-card highlight">
+                            <p class="quiz-data-highlight">Iniciantes que nunca fizeram doces faturam em média
+                                <strong>R$ 2.400 na primeira Páscoa</strong>
+                            </p>
+                        </div>
+                        <div class="quiz-revelation-points">
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Não precisa ser confeiteira
+                                    profissional</span></div>
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>O método funciona do
+                                    zero</span></div>
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>78% começaram sem nenhuma
+                                    experiência</span></div>
+                        </div>
+                        <button class="btn btn-primary" data-next="12">
+                            <span>Quero começar! Próximo</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 12: Revelação Surpreendente (era Tela 11) -->
+                <div class="quiz-screen" data-screen="12">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-surprise-icon"><i class="ph ph-lightbulb"></i></div>
+                        <h2 class="quiz-validation-title">Você sabia, <span class="user-name">Maria</span>?</h2>
+                        <div class="quiz-data-card glass-card highlight">
+                            <p class="quiz-data-highlight">Quem tem <strong>ZERO experiência</strong> tem 34% mais
+                                chance de sucesso</p>
+                        </div>
+                        <div class="quiz-revelation-points">
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Não têm vícios de técnicas
+                                    ultrapassadas</span></div>
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Seguem o passo a passo
+                                    certinho</span></div>
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Não têm medo de pedir
+                                    ajuda</span></div>
+                        </div>
+                        <button class="btn btn-primary" data-next="13">
+                            <span>Isso é pra mim! Seguir</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 13: Investimento (era Tela 12) -->
+                <div class="quiz-screen" data-screen="13">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Seu investimento</span>
+                        <h2 class="quiz-question">Quanto você poderia investir pra começar?</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-key="investimento" data-value="menos100" data-next="14">
+                                <i class="ph ph-coin"></i>
+                                <span>Menos de R$100 💵</span>
+                            </button>
+                            <button class="quiz-option" data-key="investimento" data-value="100a200" data-next="14">
+                                <i class="ph ph-coins"></i>
+                                <span>R$100 a R$200 💸</span>
+                            </button>
+                            <button class="quiz-option" data-key="investimento" data-value="200a400" data-next="14">
+                                <i class="ph ph-money"></i>
+                                <span>R$200 a R$400 💰</span>
+                            </button>
+                            <button class="quiz-option" data-key="investimento" data-value="mais400" data-next="14">
+                                <i class="ph ph-piggy-bank"></i>
+                                <span>Mais de R$400 🐷</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 14: VOCÊ SABIA #2 - Margem de Lucro -->
+                <div class="quiz-screen" data-screen="14">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-surprise-icon"><i class="ph ph-chart-line-up"></i></div>
+                        <h2 class="quiz-validation-title">Sabe quanto custa fazer um ovo de colher?</h2>
+                        <div class="quiz-data-card glass-card highlight">
+                            <p class="quiz-data-highlight">Um ovo de 500g custa <strong>R$ 15 pra produzir</strong> e
+                                você vende por <strong>R$ 80-95</strong>! 🤯</p>
+                        </div>
+                        <div class="quiz-revelation-points">
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Margem de lucro de
+                                    400-533%</span></div>
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Ingredientes simples e
+                                    baratos</span></div>
+                            <div class="revelation-point"><i class="ph ph-check"></i><span>Cliente paga pela
+                                    exclusividade</span></div>
+                        </div>
+                        <button class="btn btn-primary" data-next="15">
+                            <span>É sério isso?! Continuar</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 15: Simulação ROI (era Tela 13) -->
+                <div class="quiz-screen" data-screen="15">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-validation-icon"><i class="ph ph-chart-line-up"></i></div>
+                        <h2 class="quiz-validation-title">Olha a matemática do lucro, <span
+                                class="user-name">Maria</span>:</h2>
+                        <div class="quiz-roi-simulation glass-card">
+                            <div class="roi-flow">
+                                <div class="roi-step"><span class="roi-label">Investimento</span><span class="roi-value"
+                                        id="roi-invest">R$ 150</span></div>
+                                <i class="ph ph-arrow-right roi-arrow"></i>
+                                <div class="roi-step"><span class="roi-label">Produção</span><span class="roi-value"
+                                        id="roi-prod">30 ovos</span></div>
+                                <i class="ph ph-arrow-right roi-arrow"></i>
+                                <div class="roi-step"><span class="roi-label">Vendas</span><span class="roi-value"
+                                        id="roi-vendas">R$ 1.500</span></div>
+                            </div>
+                            <div class="roi-result">
+                                <span class="roi-result-label">Lucro Líquido</span>
+                                <span class="roi-result-value" id="roi-lucro">R$ 1.350</span>
+                                <span class="roi-result-percentage" id="roi-percent">+900% de retorno</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" data-next="16">
+                            <span>Quero esse lucro! Próximo</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 16: Maior Medo (era Tela 14) -->
+                <div class="quiz-screen" data-screen="16">
+                    <div class="quiz-screen-content">
+                        <span class="quiz-question-label">Última pergunta</span>
+                        <h2 class="quiz-question">Qual seu maior medo em relação a isso?</h2>
+                        <div class="quiz-options quiz-options-compact">
+                            <button class="quiz-option" data-key="medo" data-value="nao-vender" data-next="17">
+                                <i class="ph ph-storefront-slash"></i>
+                                <span>E se ninguém comprar? 😟</span>
+                            </button>
+                            <button class="quiz-option" data-key="medo" data-value="nao-ficar-bom" data-next="17">
+                                <i class="ph ph-thumbs-down"></i>
+                                <span>E se não ficar bonito? 😰</span>
+                            </button>
+                            <button class="quiz-option" data-key="medo" data-value="nao-dar-conta" data-next="17">
+                                <i class="ph ph-battery-low"></i>
+                                <span>E se eu não der conta? 😥</span>
+                            </button>
+                            <button class="quiz-option" data-key="medo" data-value="perder-dinheiro" data-next="17">
+                                <i class="ph ph-money-wavy"></i>
+                                <span>E se eu perder dinheiro? 😱</span>
+                            </button>
+                            <button class="quiz-option" data-key="medo" data-value="sem-medo" data-next="17">
+                                <i class="ph ph-rocket-launch"></i>
+                                <span>Não tenho medo, só me falta direção! 🚀</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 17: Quebra do Medo Personalizada (era Tela 15) -->
+                <div class="quiz-screen" data-screen="17">
+                    <div class="quiz-screen-content quiz-transition-screen">
+                        <div class="quiz-validation-icon"><i class="ph ph-shield-check"></i></div>
+                        <h2 class="quiz-validation-title" id="fear-title">Eu te entendo, <span
+                                class="user-name">Maria</span></h2>
+                        <div class="quiz-data-card glass-card">
+                            <p class="quiz-data-text" id="fear-text">E temos a solução perfeita para você.</p>
+                        </div>
+                        <div class="quiz-testimonial-mini">
+                            <img src="https://i.pravatar.cc/40?img=44" alt="Depoimento" class="testimonial-avatar-mini"
+                                id="fear-avatar">
+                            <p id="fear-quote">"Eu tinha o mesmo medo, mas descobri que era só seguir o método."</p>
+                            <span id="fear-author">— Luciana A., Fortaleza</span>
+                        </div>
+                        <button class="btn btn-primary" data-next="18">
+                            <span>Ver Meu Resultado</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela 18: Loading (era Tela 16) -->
+                <div class="quiz-screen" data-screen="18">
+                    <div class="quiz-screen-content quiz-loading-screen">
+                        <div class="quiz-loading-animation">
+                            <div class="loading-spinner"></div>
+                        </div>
+                        <h2 class="quiz-loading-title">Calculando seu potencial, <span class="user-name">Maria</span>...
+                        </h2>
+                        <div class="quiz-loading-checklist">
+                            <div class="loading-item" data-delay="0"><i class="ph ph-circle-notch"></i><span>Analisando
+                                    seu perfil...</span></div>
+                            <div class="loading-item" data-delay="1500"><i
+                                    class="ph ph-circle-notch"></i><span>Calculando
+                                    potencial de lucro...</span></div>
+                            <div class="loading-item" data-delay="3000"><i
+                                    class="ph ph-circle-notch"></i><span>Preparando
+                                    sua projeção...</span></div>
+                            <div class="loading-item" data-delay="4500"><i
+                                    class="ph ph-circle-notch"></i><span>Personalizando oferta...</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Tela 15: Removida do Modal (Agora é desbloqueada na LP) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- OFERTA DESBLOQUEADA (Aparece após o Quiz) -->
+    <section id="oferta-desbloqueada" class="hidden section-oferta-desbloqueada">
+        <div class="container">
+            <div class="quiz-result-screen"> <!-- Mantendo classe para aproveitar estilos -->
+
+                <!-- Resultado Personalizado -->
+                <div class="result-header">
+                    <span class="result-badge">ANÁLISE CONCLUÍDA</span>
+                    <h2 class="result-greeting">Parabéns, <span id="result-name">Maria</span>! 🎉</h2>
+                    <p class="result-intro">Com base no seu perfil, este é o seu potencial real para a Páscoa 2026:</p>
+                </div>
+
+                <div class="result-box glass-card highlight-border">
+                    <span class="result-label">Seu Lucro Estimado</span>
+                    <div class="result-value-wrapper">
+                        <span class="result-value" id="result-min">R$ 1.800</span>
+                        <span class="result-separator">a</span>
+                        <span class="result-value" id="result-max">R$ 4.200</span>
+                    </div>
+                    <span class="result-period">trabalhando nas horas vagas</span>
+                </div>
+
+                <p class="result-message">
+                    Detectamos que você tem o <strong>perfil ideal</strong> para o método:
+                    <span id="profile-summary-text">pouco investimento inicial e vontade de crescer.</span>
+                </p>
+
+                <div class="quiz-divider"></div>
+
+                <!-- Apresentação da Expert -->
+                <div class="expert-section glass-card">
+                    <div class="expert-content">
+                        <img src="assets/gaby_profile.png" alt="Gaby Bitencourt" class="expert-photo">
+                        <div class="expert-bio">
+                            <h3>Prazer, sou Gaby Bitencourt 👩‍🍳</h3>
+                            <p>Comecei na cozinha da minha mãe, com uma forma de plástico e muita vontade sem dinheiro.
+                                Hoje ajudo mais de 5.000 mulheres a viverem de confeitaria.</p>
+                            <p><strong>Vou te pegar pela mão e te ensinar tudo o que sei.</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A Oferta -->
+                <div class="offer-section-full">
+                    <div class="offer-header-lp">
+                        <h3 class="offer-title">O que você vai receber agora:</h3>
+                    </div>
+
+                    <div class="offer-grid">
+                        <div class="offer-card">
+                            <img src="assets/ovo_nutella.png" alt="Ovo Gourmet" class="offer-img-mini">
+                            <h4>Apostila de Receitas Lucrativas</h4>
+                            <p>12 receitas campeãs de vendas. Custo baixo, lucro alto.</p>
+                        </div>
+                        <div class="offer-card">
+                            <img src="assets/producao_ovos_embalados.png" alt="Produção" class="offer-img-mini">
+                            <h4>Produção Descomplicada</h4>
+                            <p>Aprenda a produzir em escala na sua cozinha, sem bagunça.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bônus -->
+                    <div class="bonus-list glass-card">
+                        <span class="bonus-tag">🎁 BÔNUS EXCLUSIVOS (HOJE)</span>
+                        <ul>
+                            <li>
+                                <i class="ph ph-whatsapp-logo"></i>
+                                <div>
+                                    <strong>Pack de Scripts de Vendas</strong>
+                                    <span>Textos prontos para copiar e colar no WhatsApp</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-file-xls"></i>
+                                <div>
+                                    <strong>Calculadora Automática</strong>
+                                    <span>Nunca mais tenha prejuízo cobrando errado</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-instagram-logo"></i>
+                                <div>
+                                    <strong>Kit de Artes (Canva)</strong>
+                                    <span>Templates lindos para postar no Instagram</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Preço e CTA -->
+                    <div class="final-offer glass-card">
+                        <div class="offer-price-container">
+                            <span class="price-old">De <s>R$ 97,90</s> por apenas:</span>
+                            <h2 class="price-main">3x de R$ 9,67</h2>
+                            <span class="price-cash">ou R$ 27,00 à vista</span>
+                        </div>
+
+                        <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI"
+                            class="btn btn-primary btn-pulsing btn-large-cta" id="btn-checkout">
+                            <span>QUERO ACESSAR A FÓRMULA AGORA</span>
+                            <i class="ph ph-lock-key"></i>
+                        </a>
+
+                        <div class="guarantee-badge">
+                            <i class="ph ph-shield-check"></i>
+                            <span>Garantia de 7 Dias ou seu dinheiro de volta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
