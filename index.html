@@ -224,13 +224,13 @@
         window.addEventListener('load', function () { var s = document.createElement('script'); s.src = 'https://unpkg.com/@phosphor-icons/web'; document.body.appendChild(s) });
     </script>
     <!-- CSS: Carregamento assíncrono para não bloquear render -->
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.min.css">
     </noscript>
-    <link rel="preload" href="quiz-result.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="quiz-result.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="quiz-result.css">
+        <link rel="stylesheet" href="quiz-result.min.css">
     </noscript>
     <title>Fórmula Chocolate & Lucro™ | Fature de R$1.000 a R$5.000 na Páscoa</title>
     <!-- Analytics movidos para o fim do body para não bloquear render -->
@@ -1533,7 +1533,7 @@
         </div>
     </section>
 
-    <script defer src="quiz.js"></script>
+    <script defer src="quiz.min.js"></script>
     <script>
         function startStickyCountdown() {
             const timerElement = document.getElementById('countdown-timer');
