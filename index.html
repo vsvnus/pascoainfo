@@ -9,12 +9,28 @@
     <meta property="og:title" content="Método Chocolate Dourado™ - Fature até R$5.000 na Páscoa">
     <meta property="og:description"
         content="Descubra seu potencial de lucro vendendo ovos de Páscoa artesanais. Quiz gratuito de 2 minutos.">
+
+    <!-- PRELOAD CRÍTICO: LCP Image -->
+    <link rel="preload" as="image" href="assets/hero_egg.webp" fetchpriority="high">
+
+    <!-- PRECONNECT para fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- FONTES: Carregamento assíncrono -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- PHOSPHOR ICONS: Defer para não bloquear render -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="quiz-result.css">
     <title>Fórmula Chocolate & Lucro™ | Fature de R$1.000 a R$5.000 na Páscoa</title>
@@ -70,7 +86,8 @@
         <div class="container">
             <div class="hero-content">
 
-                <img src="assets/logo_formula.png" alt="Fórmula Chocolate & Lucro - Logo" class="hero-logo">
+                <img src="assets/logo_formula.webp" alt="Fórmula Chocolate & Lucro - Logo" class="hero-logo" width="250"
+                    height="100" decoding="async">
                 <h1 class="hero-headline">
                     Descubra a Fórmula Belga que Está Transformando Cozinhas de Mulheres Brasileiras em Verdadeiras
                     <span class="highlight">Fábricas de Dinheiro</span> na Páscoa
@@ -117,8 +134,8 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-image-container tilt-effect">
-                    <img src="assets/hero_egg.png" alt="Ovo de Páscoa Gourmet com recheio cremoso"
-                        class="hero-main-img">
+                    <img src="assets/hero_egg.webp" alt="Ovo de Páscoa Gourmet com recheio cremoso"
+                        class="hero-main-img" width="450" height="500" fetchpriority="high" decoding="async">
                     <div class="hero-floating-stat glass-card">
                         <span class="stat-value">R$ 3.200</span>
                         <span class="stat-label">Lucro Médio</span>
@@ -240,7 +257,7 @@
                         <span id="user-name-transition">Ana</span>, pra você sair do <strong>potencial</strong> e ir pra
                         <strong>prática</strong>, eu criei o:
                     </p>
-                    <img src="assets/logo_formula.png" alt="Fórmula Chocolate & Lucro" class="result-product-logo">
+                    <img src="assets/logo_formula.webp" alt="Fórmula Chocolate & Lucro" class="result-product-logo">
                     <p class="product-tagline">
                         A fórmula de <strong>7 passos</strong> pra fazer seu primeiro ovo profissional ainda essa semana
                         — mesmo que nunca tenha derretido chocolate na vida.
@@ -285,7 +302,7 @@
 
                 <div class="expert-story-full">
                     <div class="expert-story-img">
-                        <img src="assets/gaby_profile.png" alt="Gaby Bitencourt na cozinha" class="img-gaby-hero">
+                        <img src="assets/gaby_profile.webp" alt="Gaby Bitencourt na cozinha" class="img-gaby-hero">
                         <div class="expert-years-badge">
                             <span class="bad-num">12+</span>
                             <span class="bad-txt">Anos<br>Ensinando</span>
@@ -337,28 +354,32 @@
             <div class="problema-grid">
                 <div class="problema-card glass-card">
                     <div class="problema-img-wrapper">
-                        <img src="assets/pain_money.png" alt="Dificuldade financeira" loading="lazy">
+                        <img src="assets/pain_money.webp" alt="Dificuldade financeira" loading="lazy" width="300"
+                            height="200" decoding="async">
                     </div>
                     <h3>O dinheiro nunca sobra</h3>
                     <p>Trabalha o mês inteiro, mas no fim as contas sempre apertam.</p>
                 </div>
                 <div class="problema-card glass-card">
                     <div class="problema-img-wrapper">
-                        <img src="assets/pain_time.png" alt="Falta de tempo e rotina corrida" loading="lazy">
+                        <img src="assets/pain_time.webp" alt="Falta de tempo e rotina corrida" loading="lazy"
+                            width="300" height="200" decoding="async">
                     </div>
                     <h3>Tempo escasso</h3>
                     <p>Entre trabalho, casa e filhos, sobra tão pouco tempo.</p>
                 </div>
                 <div class="problema-card glass-card">
                     <div class="problema-img-wrapper">
-                        <img src="assets/pain_talent.png" alt="Mãos talentosas paradas" loading="lazy">
+                        <img src="assets/pain_talent.webp" alt="Mãos talentosas paradas" loading="lazy" width="300"
+                            height="200" decoding="async">
                     </div>
                     <h3>Talento desperdiçado</h3>
                     <p>Você tem habilidade manual mas nunca monetizou.</p>
                 </div>
                 <div class="problema-card glass-card">
                     <div class="problema-img-wrapper">
-                        <img src="assets/pain_fail.png" alt="Projetos inacabados" loading="lazy">
+                        <img src="assets/pain_fail.webp" alt="Projetos inacabados" loading="lazy" width="300"
+                            height="200" decoding="async">
                     </div>
                     <h3>Frustrações passadas</h3>
                     <p>Já tentou outras coisas e não deu certo.</p>
@@ -392,7 +413,7 @@
             <div class="gallery-grid">
                 <!-- Item 1: Nutella (Campeão) -->
                 <div class="gallery-item glass-card tilt-effect">
-                    <img src="assets/ovo_nutella.png" alt="Ovo de Colher com Nutella cremosa" loading="lazy">
+                    <img src="assets/ovo_nutella.webp" alt="Ovo de Colher com Nutella cremosa" loading="lazy">
                     <div class="gallery-caption">
                         <span>Ovo Supreme Nutella</span>
                         <div class="gallery-price-tag">Venda: R$ 95,00</div>
@@ -400,7 +421,7 @@
                 </div>
                 <!-- Item 2: Madeira (Premium) -->
                 <div class="gallery-item glass-card tilt-effect">
-                    <img src="assets/ovo_madeira.jpg" alt="Ovo de Colher em caixa de madeira rústica" loading="lazy">
+                    <img src="assets/ovo_madeira.webp" alt="Ovo de Colher em caixa de madeira rústica" loading="lazy">
                     <div class="gallery-caption">
                         <span>Ovo Rústico Deluxe</span>
                         <div class="gallery-price-tag">Venda: R$ 130,00</div>
@@ -408,7 +429,7 @@
                 </div>
                 <!-- Item 3: Quarteto (Ex-Trio) -->
                 <div class="gallery-item glass-card tilt-effect">
-                    <img src="assets/ovo_trio.png" alt="Quarteto de Ovos de Colher Gourmet" loading="lazy">
+                    <img src="assets/ovo_trio.webp" alt="Quarteto de Ovos de Colher Gourmet" loading="lazy">
                     <div class="gallery-caption">
                         <span>Quarteto Degustação</span>
                         <div class="gallery-price-tag">Venda: R$ 145,00</div>
@@ -416,7 +437,7 @@
                 </div>
                 <!-- Item 4: Kraft (Artesanal) -->
                 <div class="gallery-item glass-card tilt-effect">
-                    <img src="assets/ovo_kraft.jpg" alt="Ovo de Colher em caixa kraft com laço" loading="lazy">
+                    <img src="assets/ovo_kraft.webp" alt="Ovo de Colher em caixa kraft com laço" loading="lazy">
                     <div class="gallery-caption">
                         <span>Colher Artesanal</span>
                         <div class="gallery-price-tag">Venda: R$ 110,00</div>
@@ -424,7 +445,7 @@
                 </div>
                 <!-- Item 5: Kids (Colorido) -->
                 <div class="gallery-item glass-card tilt-effect">
-                    <img src="assets/ovo_colorido.jpg" alt="Ovo de páscoa colorido em caixa transparente"
+                    <img src="assets/ovo_colorido.webp" alt="Ovo de páscoa colorido em caixa transparente"
                         loading="lazy">
                     <div class="gallery-caption">
                         <span>Ovo Kids Confete</span>
@@ -433,7 +454,7 @@
                 </div>
                 <!-- Item 6: Clássico (Entrada) -->
                 <div class="gallery-item glass-card tilt-effect">
-                    <img src="assets/ovo_classico.jpg" alt="Ovo de páscoa clássico embalado para presente"
+                    <img src="assets/ovo_classico.webp" alt="Ovo de páscoa clássico embalado para presente"
                         loading="lazy">
                     <div class="gallery-caption">
                         <span>Clássico Presente</span>
@@ -1256,7 +1277,7 @@
                 <!-- Apresentação da Expert -->
                 <div class="expert-section glass-card">
                     <div class="expert-content">
-                        <img src="assets/gaby_profile.png" alt="Gaby Bitencourt" class="expert-photo">
+                        <img src="assets/gaby_profile.webp" alt="Gaby Bitencourt" class="expert-photo">
                         <div class="expert-bio">
                             <h3>Prazer, sou Gaby Bitencourt 👩‍🍳</h3>
                             <p>Comecei na cozinha da minha mãe, com uma forma de plástico e muita vontade sem dinheiro.
@@ -1274,12 +1295,12 @@
 
                     <div class="offer-grid">
                         <div class="offer-card">
-                            <img src="assets/ovo_nutella.png" alt="Ovo Gourmet" class="offer-img-mini">
+                            <img src="assets/ovo_nutella.webp" alt="Ovo Gourmet" class="offer-img-mini">
                             <h4>Apostila de Receitas Lucrativas</h4>
                             <p>12 receitas campeãs de vendas. Custo baixo, lucro alto.</p>
                         </div>
                         <div class="offer-card">
-                            <img src="assets/producao_ovos_embalados.png" alt="Produção" class="offer-img-mini">
+                            <img src="assets/producao_ovos_embalados.webp" alt="Produção" class="offer-img-mini">
                             <h4>Produção Descomplicada</h4>
                             <p>Aprenda a produzir em escala na sua cozinha, sem bagunça.</p>
                         </div>
