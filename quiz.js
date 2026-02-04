@@ -20,7 +20,38 @@ class Quiz {
         this.answers = {};
         this.quizCompleted = false;
 
+        // Nomes das telas para tracking
+        this.screenNames = {
+            1: 'nome',
+            2: 'filhos',
+            3: 'trabalho',
+            4: 'renda',
+            5: 'cidade',
+            6: 'validacao_cidade',
+            7: 'tempo',
+            8: 'experiencia',
+            9: 'validacao_perfil',
+            10: 'margem_lucro',
+            11: 'iniciantes_sucesso',
+            12: 'investimento',
+            13: 'objetivo',
+            14: 'medo',
+            15: 'roi_simulacao',
+            16: 'validacao_medo',
+            17: 'decisao',
+            18: 'loading',
+            19: 'resultado_final'
+        };
+
         this.init();
+    }
+
+    // Analytics: Envia evento para GA4
+    trackEvent(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, params);
+            console.log(`📊 [GA4] ${eventName}`, params);
+        }
     }
 
     init() {
@@ -111,10 +142,23 @@ class Quiz {
         document.body.style.overflow = 'hidden';
         this.quizCompleted = false;
         this.closeBtn?.classList.add('hidden');
+
+        // GA4: Quiz iniciado
+        this.trackEvent('quiz_start');
+
         this.goToScreen(1);
     }
 
     close() {
+        // GA4: Se fechou sem completar, é abandono
+        if (!this.quizCompleted && this.currentScreen > 1) {
+            const lastScreenName = this.screenNames[this.currentScreen] || `tela_${this.currentScreen}`;
+            this.trackEvent('quiz_abandon', {
+                last_step_number: this.currentScreen,
+                last_step_name: lastScreenName
+            });
+        }
+
         this.modal.classList.remove('active');
         document.body.style.overflow = '';
     }
@@ -134,6 +178,13 @@ class Quiz {
             this.currentScreen = screenNumber;
             this.updateProgress();
             this.container.scrollTop = 0;
+
+            // GA4: Trackeia cada tela visitada
+            const screenName = this.screenNames[screenNumber] || `tela_${screenNumber}`;
+            this.trackEvent('quiz_step', {
+                step_number: screenNumber,
+                step_name: screenName
+            });
 
             // Special handlers
             if (screenNumber === 6) this.handleCityValidation();
@@ -386,6 +437,16 @@ class Quiz {
     handleResultScreenLP() {
         this.quizCompleted = true;
         this.close(); // Fecha o modal
+
+        // GA4: Quiz completo com resumo das respostas
+        this.trackEvent('quiz_complete', {
+            user_name: this.userName,
+            trabalho: this.answers.trabalho || 'not_set',
+            filhos: this.answers.filhos || 'not_set',
+            cidade: this.answers.cidade || 'not_set',
+            tempo: this.answers.tempo || 'not_set',
+            medo: this.answers.medo || 'not_set'
+        });
 
         // Desbloqueia a seção na LP
         const offerSection = document.getElementById('oferta-desbloqueada');
