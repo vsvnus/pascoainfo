@@ -481,7 +481,11 @@ class Quiz {
 
                 newBtn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    window.location.href = "https://pay.cakto.com.br/f5isonf_753149";
+                    if (window.trackAndRedirect) {
+                        window.trackAndRedirect("https://pay.cakto.com.br/f5isonf_753149");
+                    } else {
+                        window.location.href = "https://pay.cakto.com.br/f5isonf_753149";
+                    }
                 });
             });
 
