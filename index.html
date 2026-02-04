@@ -223,8 +223,11 @@
     <script>
         window.addEventListener('load', function () { var s = document.createElement('script'); s.src = 'https://unpkg.com/@phosphor-icons/web'; document.body.appendChild(s) });
     </script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- CSS: Carregamento assíncrono para não bloquear render -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
     <link rel="stylesheet" href="quiz-result.css">
     <title>Fórmula Chocolate & Lucro™ | Fature de R$1.000 a R$5.000 na Páscoa</title>
     <!-- Meta Pixel Code -->
