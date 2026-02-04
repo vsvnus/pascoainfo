@@ -682,4 +682,22 @@ class Quiz {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new Quiz());
+// Lazy Load Quiz: Inicia apenas na primeira interação do usuário para não bloquear LCP
+let quizInitialized = false;
+function initQuizLazy() {
+    if (quizInitialized) return;
+    quizInitialized = true;
+    new Quiz();
+    // Remove listeners após init
+    ['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt =>
+        window.removeEventListener(evt, initQuizLazy)
+    );
+}
+
+// Listeners passivos para performance
+['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt =>
+    window.addEventListener(evt, initQuizLazy, { passive: true, once: true })
+);
+
+// Fallback: Inicia após 4 segundos se nada acontecer (para garantir)
+setTimeout(initQuizLazy, 4000);

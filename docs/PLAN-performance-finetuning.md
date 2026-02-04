@@ -5,20 +5,29 @@
 - Partytown installed but possibly not sufficient or misconfigured.
 - **Goal**: Break the 90+ barrier.
 
-## 🕵️‍♂️ Phase 1: Deep Diagnosis (Identify the *Real* Bottleneck)
-- [ ] **Verify Partytown**: Is it actually preventing main-thread blocking? (Check Network tab for tracking calls).
-- [ ] **Analyze LCP Element**: Is it the Hero Image (`hero_egg.webp`) or the H1 Text?
-- [ ] **Check Fonts**: Are Google Fonts causing layout shifts (FOUT) or connection delays?
+## 🕵️‍♂️ Phase 1: Deep Diagnosis (Findings) ✅
+- **CRITICAL**: `quiz.js` instantiates on `DOMContentLoaded`, running logic for hidden modals unnecessarily. This burns CPU during load.
+- **BLOCKING**: `assets/js/pixel-events.js` is loaded synchronously (no defer/async), blocking rendering at line 1544.
+- **LCP Latency**: Google Fonts overhead + LCP Image fighting with Main Thread JS.
 
-## 🛠️ Phase 2: LCP & Visual Stability (Critical)
-- [ ] **Self-Host Fonts**: Download Google Fonts locally to remove connection latency.
-- [ ] **Preload Hardening**: Ensure Hero Image is preloaded *perfectly* (fetchpriority="high").
-- [ ] **Layout Stability**: Reserve explicit space for Hero Image to kill any remaining CLS.
+## 🛠️ Phase 2: Action Plan (Validated)
+### 1. Fix Sync Blocking Script
+- [ ] Add `defer` attribute to `assets/js/pixel-events.js` in `index.html`.
 
-## ⚡ Phase 3: JavaScript Execution (Main Thread)
-- [ ] **Audit `quiz.js`**: Does it run expensive logic on `DOMContentLoaded`?
-- [ ] **Defer Quiz Logic**: Delay quiz initialization until *user interaction* (e.g., first scroll or click), not just page load.
-- [ ] **CSS Extraction**: Minimize the "Critical Inline CSS" block if it's too large.
+### 2. Lazy Hydrate Quiz (Major Win)
+- [ ] Modify `quiz.js`: Remove `DOMContentLoaded` auto-init.
+- [ ] Create `window.loadQuiz()` function.
+- [ ] Init Quiz only on first interaction (scroll, mousemove, touch) or button click.
+
+### 3. Fonts Optimization
+- [ ] Download Google Fonts (Inter/Outfit) as WOFF2.
+- [ ] Serve locally from `/assets/fonts/`.
+- [ ] Update CSS to use local fonts.
+
+## ⚡ Phase 3: Verification
+- [ ] Check Network tab: No blocking scripts.
+- [ ] Check Performance tab: Zero "Long Tasks" during load.
+- [ ] Score Target: 90+ Mobile.
 
 ## 🧪 Phase 4: Extreme Measures (If needed)
 - [ ] **No-JS First Paint**: Ensure the hero renders 100% fine without ANY JS.
