@@ -120,8 +120,8 @@ class Quiz {
     }
 
     goToScreen(screenNumber) {
-        // Intercepta a tela final (17) para mostrar na LP (Experience "Unlock")
-        if (screenNumber === 17) {
+        // Intercepta a tela final (19) para mostrar na LP (Experience "Unlock")
+        if (screenNumber === 19) {
             this.handleResultScreenLP();
             return;
         }
@@ -380,7 +380,7 @@ class Quiz {
             }, delay + 1200);
         });
 
-        setTimeout(() => this.goToScreen(17), 6000);
+        setTimeout(() => this.goToScreen(19), 6000);
     }
 
     handleResultScreenLP() {
@@ -420,7 +420,7 @@ class Quiz {
 
                 newBtn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    offerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.location.href = "https://pay.cakto.com.br/f5isonf_753149";
                 });
             });
 
