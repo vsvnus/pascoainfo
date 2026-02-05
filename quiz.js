@@ -217,7 +217,7 @@ class Quiz {
         let title = `Excelente ponto, ${this.userName}. 🤔`;
         let text = 'Sua rotina tem desafios reais, mas identificamos um padrão interessante: perfis como o seu tendem a ter resultados surpreendentes porque focam na QUALIDADE do tempo.';
         let testimonial = {
-            img: 'https://i.pravatar.cc/40?img=32',
+            img: 'https://i.pravatar.cc/40?img=34',
             quote: '"Achei que minha rotina ia me impedir, mas descobri que precisava de 1h focada, não o dia todo. Foi libertador!"',
             author: '— Patrícia R.'
         };
@@ -250,7 +250,7 @@ class Quiz {
             title = `Visão de Águia, ${this.userName} 🦅`;
             text = 'Você já sabe que renda depende de esforço inteligente. A "Fórmula Chocolate & Lucro" não é gasto, é uma nova linha de receita sazonal para injetar caixa rápido no seu negócio.';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=33',
+                img: 'https://i.pravatar.cc/40?img=35',
                 quote: '"Integrei os ovos no meu salão e vendi para as clientes que já tinha. Dobrei meu faturamento de abril sem gastar com anúncio!"',
                 author: '— Juliana C.'
             };
@@ -343,7 +343,7 @@ class Quiz {
             'nao-dar-conta': {
                 title: `Não tente ser a Mulher Maravilha ‍♀️`,
                 text: 'Você não precisa dar conta de tudo sozinha, só precisa de ORGANIZAÇÃO. A fórmula tem um Cronograma de Produção que te diz: "Hoje faça X, amanhã Y". Assim você produz muito sem virar noite.',
-                img: 'https://i.pravatar.cc/40?img=29',
+                img: 'https://i.pravatar.cc/40?img=30',
                 quote: '"Com o calendário, parei de correr igual barata tonta. Trabalhei tranquila e ainda tive tempo pra família no domingo de Páscoa."',
                 author: '— Amanda O.'
             },
@@ -357,7 +357,7 @@ class Quiz {
             'sem-medo': {
                 title: `Sua mentalidade já venceu 🏆`,
                 text: 'Quem elimina o medo da equação sai na frente de 99% das pessoas. Você tem a atitude certa. Agora só precisa da ferramenta certa (a Fórmula) para transformar essa coragem em dinheiro no bolso.',
-                img: 'https://i.pravatar.cc/40?img=33',
+                img: 'https://i.pravatar.cc/40?img=35',
                 quote: '"Eu sabia que ia dar certo, só não sabia como. O curso foi o mapa do tesouro que eu precisava pra explodir de vender."',
                 author: '— Juliana C.'
             }
