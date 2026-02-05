@@ -10,16 +10,16 @@
 - **BLOCKING**: `assets/js/pixel-events.js` is loaded synchronously (no defer/async), blocking rendering at line 1544.
 - **LCP Latency**: Google Fonts overhead + LCP Image fighting with Main Thread JS.
 
-## 🛠️ Phase 2: Action Plan (Validated)
+## 🛠️ Phase 2: Action Plan (Executed) ✅
 ### 1. Fix Sync Blocking Script
-- [ ] Add `defer` attribute to `assets/js/pixel-events.js` in `index.html`.
+- [x] Add `defer` attribute to `assets/js/pixel-events.js` in `index.html`.
 
 ### 2. Lazy Hydrate Quiz (Major Win)
-- [ ] Modify `quiz.js`: Remove `DOMContentLoaded` auto-init.
-- [ ] Create `window.loadQuiz()` function.
-- [ ] Init Quiz only on first interaction (scroll, mousemove, touch) or button click.
+- [x] Modify `quiz.js`: Remove `DOMContentLoaded` auto-init.
+- [x] Create `initQuizLazy` logic based on user interaction.
+- [x] Minify new `quiz.js` to `quiz.min.js`.
 
-### 3. Fonts Optimization
+### 3. Fonts Optimization (Next Step if needed)
 - [ ] Download Google Fonts (Inter/Outfit) as WOFF2.
 - [ ] Serve locally from `/assets/fonts/`.
 - [ ] Update CSS to use local fonts.
