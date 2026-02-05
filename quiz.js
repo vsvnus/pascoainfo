@@ -470,21 +470,37 @@ class Quiz {
             if (transitionName) transitionName.textContent = this.userName;
 
             // 6. Atualiza TODOS os botões da LP para levar à oferta
+            const checkoutUrl = "https://pay.cakto.com.br/f5isonf_753149";
             document.querySelectorAll('[data-action="open-quiz"]').forEach(btn => {
                 // Muda visual e texto
-                btn.innerHTML = '<span>Liberar Acesso Agora</span><i class="ph ph-lock-key-open"></i>';
+                btn.innerHTML = '<span>LIBERAR MEU ACESSO AGORA</span><i class="ph ph-lock-key-open"></i>';
                 btn.classList.add('btn-pulsing');
+                btn.classList.remove('pulse-animation'); // Remove animação antiga se houver
 
-                // Remove listener antigo e adiciona scroll
+                // Remove listener antigo substituindo o elemento
                 const newBtn = btn.cloneNode(true);
+
+                // Se for um link, atualiza o href também
+                if (newBtn.tagName === 'A') {
+                    newBtn.href = checkoutUrl;
+                }
+
                 btn.parentNode.replaceChild(newBtn, btn);
 
+                // Adiciona o novo evento de redirecionamento/tracking
                 newBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (window.trackAndRedirect) {
-                        window.trackAndRedirect("https://pay.cakto.com.br/f5isonf_753149");
-                    } else {
-                        window.location.href = "https://pay.cakto.com.br/f5isonf_753149";
+                    // Se não for um link real (ou se quisermos forçar o tracking)
+                    if (newBtn.tagName !== 'A' || !newBtn.href) {
+                        e.preventDefault();
+                        if (window.trackAndRedirect) {
+                            window.trackAndRedirect(checkoutUrl);
+                        } else {
+                            window.location.href = checkoutUrl;
+                        }
+                    } else if (window.trackAndRedirect) {
+                        // Se for um link mas tivermos tracking global
+                        e.preventDefault();
+                        window.trackAndRedirect(checkoutUrl);
                     }
                 });
             });
