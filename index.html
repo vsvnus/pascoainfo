@@ -9,6 +9,8 @@
     <meta property="og:title" content="Método Chocolate Dourado™ - Fature até R$5.000 na Páscoa">
     <meta property="og:description"
         content="Descubra seu potencial de lucro vendendo ovos de Páscoa artesanais. Quiz gratuito de 2 minutos.">
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- PRELOAD CRÍTICO: LCP Images -->
     <link rel="preload" as="image" href="assets/logo_formula.webp" fetchpriority="high">
@@ -78,6 +80,7 @@
             max-width: 250px;
             height: auto;
             aspect-ratio: 438 / 238;
+            margin: 0 auto 1.5rem;
         }
 
         .hero-content {
@@ -98,12 +101,7 @@
             max-width: 800px;
         }
 
-        .hero-logo {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            margin: 0 auto 1.5rem;
-        }
+
 
         .countdown-box {
             min-width: 60px;
@@ -467,14 +465,7 @@
     </noscript>
     <title>Fórmula Chocolate & Lucro™ | Fature de R$1.000 a R$5.000 na Páscoa</title>
     <!-- Analytics movidos para o fim do body para não bloquear render -->
-    <!-- Partytown: Tracking em Thread Separada (Web Worker) -->
-    <script>
-        partytown = {
-            lib: 'assets/partytown/',
-            forward: ['fbq', 'gtag', 'dataLayer.push']
-        };
-    </script>
-    <script async src="assets/partytown/partytown.js"></script>
+
 </head>
 
 <body>
@@ -1769,6 +1760,15 @@
             startEasterCountdown();
         });
     </script>
+
+    <!-- Partytown: Tracking em Thread Separada (Web Worker) -->
+    <script>
+        partytown = {
+            lib: 'assets/partytown/',
+            forward: ['fbq', 'gtag', 'dataLayer.push']
+        };
+    </script>
+    <script async src="assets/partytown/partytown.js"></script>
 
     <!-- Analytics (Carregados após render para não impactar performance) -->
     <!-- Meta Pixel Code (Partytown) -->
