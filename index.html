@@ -80,15 +80,81 @@
             aspect-ratio: 438 / 238;
         }
 
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 0 15px;
+        }
+
         .hero-headline {
             font-family: var(--font-display);
             font-size: clamp(1.25rem, 4vw, 2.5rem);
             font-weight: 700;
             text-align: center;
+            margin: 0 auto 1.5rem;
+            max-width: 800px;
+        }
+
+        .hero-logo {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin: 0 auto 1.5rem;
         }
 
         .countdown-box {
             min-width: 60px;
+        }
+
+        /* Novas regras para a lista de oferta com valores */
+        .offer-bullets-clean li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(107, 45, 91, 0.05);
+            width: 100%;
+        }
+
+        .offer-item-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+            flex: 1;
+        }
+
+        .old-item-price {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .offer-total-breakdown {
+            margin-top: 1.5rem;
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(107, 45, 91, 0.05);
+            border-radius: 15px;
+        }
+
+        .total-value-cross {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .today-special-label {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 
@@ -611,15 +677,50 @@
                     <h3 class="offer-title-simple">O que você recebe hoje:</h3>
 
                     <ul class="offer-bullets-clean">
-                        <li><i class="ph ph-check-circle"></i>12 Receitas Passo-a-Passo com Custo e Precificação</li>
-                        <li><i class="ph ph-check-circle"></i>Scripts de Vendas Prontos (WhatsApp + Instagram)</li>
-                        <li><i class="ph ph-check-circle"></i>Calculadora Automática de Lucro</li>
-                        <li><i class="ph ph-check-circle"></i>Cronograma de Produção sem Caos</li>
-                        <li><i class="ph ph-check-circle"></i>Suporte Online 24/7</li>
+                        <li>
+                            <div class="offer-item-content">
+                                <i class="ph ph-check-circle"></i>
+                                <span>12 Receitas Passo-a-Passo com Custo</span>
+                            </div>
+                            <span class="old-item-price"><s>R$ 47,00</s></span>
+                        </li>
+                        <li>
+                            <div class="offer-item-content">
+                                <i class="ph ph-check-circle"></i>
+                                <span>Scripts de Vendas (WhatsApp + Insta)</span>
+                            </div>
+                            <span class="old-item-price"><s>R$ 37,00</s></span>
+                        </li>
+                        <li>
+                            <div class="offer-item-content">
+                                <i class="ph ph-check-circle"></i>
+                                <span>Calculadora Automática de Lucro</span>
+                            </div>
+                            <span class="old-item-price"><s>R$ 37,00</s></span>
+                        </li>
+                        <li>
+                            <div class="offer-item-content">
+                                <i class="ph ph-check-circle"></i>
+                                <span>Cronograma de Produção sem Caos</span>
+                            </div>
+                            <span class="old-item-price"><s>R$ 27,00</s></span>
+                        </li>
+                        <li>
+                            <div class="offer-item-content">
+                                <i class="ph ph-check-circle"></i>
+                                <span>Suporte Online Prioritário</span>
+                            </div>
+                            <span class="old-item-price"><s>R$ 47,00</s></span>
+                        </li>
                     </ul>
 
+                    <div class="offer-total-breakdown">
+                        <div class="total-value-cross">Valor Total: <s>R$ 195,00</s></div>
+                        <div class="today-special-label">Mas hoje você leva TUDO por:</div>
+                    </div>
+
                     <div class="offer-price-simple">
-                        <div class="price-strike">De <s>R$ 97,90</s> por:</div>
+
                         <div class="price-highlight">
                             <span class="price-installment">6x de R$ 5,32</span>
                             <span class="price-cash-alt">ou R$ 27 à vista</span>

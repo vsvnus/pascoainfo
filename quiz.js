@@ -487,20 +487,19 @@ class Quiz {
 
                 btn.parentNode.replaceChild(newBtn, btn);
 
-                // Adiciona o novo evento de redirecionamento/tracking
+                // Adiciona o novo evento de scroll para a seção de oferta
                 newBtn.addEventListener('click', (e) => {
-                    // Se não for um link real (ou se quisermos forçar o tracking)
-                    if (newBtn.tagName !== 'A' || !newBtn.href) {
-                        e.preventDefault();
-                        if (window.trackAndRedirect) {
-                            window.trackAndRedirect(checkoutUrl);
-                        } else {
-                            window.location.href = checkoutUrl;
-                        }
-                    } else if (window.trackAndRedirect) {
-                        // Se for um link mas tivermos tracking global
-                        e.preventDefault();
-                        window.trackAndRedirect(checkoutUrl);
+                    e.preventDefault();
+                    const offerSection = document.getElementById('oferta-desbloqueada');
+                    if (offerSection) {
+                        const headerOffset = 20;
+                        const elementPosition = offerSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
                     }
                 });
             });
