@@ -245,15 +245,25 @@
         }
 
         /* Critical CSS - Hero Lock */
+        :root {
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-4xl: 3.5rem;
+            --font-display: 'Outfit', sans-serif;
+            --color-text-light: #6D5B5B;
+            --color-primary: #6B2D5B;
+            --color-secondary: #D4A574;
+        }
+
         .hero {
-            padding: var(--space-4xl) 0;
+            padding: 3.5rem 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
             contain: layout paint;
             background: linear-gradient(135deg, #FDF8F5, #F5EDE8);
-            /* Added back background */
         }
 
         .hero-content {
@@ -265,22 +275,22 @@
         }
 
         .hero-headline {
-            font-family: var(--font-display);
+            font-family: 'Outfit', sans-serif;
             font-size: clamp(1.25rem, 3vw, 2rem);
             font-weight: 700;
-            margin-bottom: var(--space-sm);
+            margin-bottom: 0.5rem;
             line-height: 1.25;
         }
 
         .hero-subheadline {
             font-size: 0.9375rem;
-            color: var(--color-text-light);
-            margin-bottom: var(--space-lg);
+            color: #6D5B5B;
+            margin-bottom: 1.5rem;
             max-width: 540px;
         }
 
         .btn-hero {
-            padding: var(--space-md) var(--space-xl);
+            padding: 1rem 2rem;
             font-size: 1rem;
             width: 100%;
             max-width: 380px;
