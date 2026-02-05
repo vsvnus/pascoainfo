@@ -98,23 +98,11 @@
     <link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/Outfit.woff2" as="font" type="font/woff2" crossorigin>
 
-    <style>
-        @font-face {
-            font-family: "Phosphor";
-            src: url("assets/icons/Phosphor.woff2") format("woff2");
-            font-display: swap;
-        }
-
-        .ph {
-            font-family: "Phosphor" !important;
-            display: inline-block;
-            line-height: 1;
-        }
-
-        .ph-arrow-right:before {
-            content: "\e95c";
-        }
-    </style>
+    <!-- Font: Phosphor Icons -->
+    <link rel="preload" href="assets/icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/icons.css">
+    </noscript>
     <!-- CSS: Deferred loading for non-critical sections -->
     <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="quiz-core.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -325,6 +313,27 @@
                         A fórmula de <strong>7 passos</strong> pra fazer seu primeiro ovo profissional ainda essa semana
                         — mesmo que nunca tenha derretido chocolate na vida.
                     </p>
+                </div>
+
+                <!-- 5.5 APRESENTAÇÃO DA EXPERT -->
+                <div class="expert-story-full glass-card">
+                    <div class="expert-story-img">
+                        <img src="assets/gaby_profile.webp" alt="Gaby Bitencourt" class="img-gaby-hero" width="400"
+                            height="400" loading="lazy" decoding="async">
+                        <div class="expert-years-badge">
+                            <span class="bad-num">10+</span>
+                            <span class="bad-txt">Anos de<br>Cozinha</span>
+                        </div>
+                    </div>
+                    <div class="expert-story-content">
+                        <span class="story-label">Sua mentora</span>
+                        <h3>Prazer, sou Gaby Bitencourt</h3>
+                        <p>Eu sei exatamente o que é querer mudar de vida e não saber por onde começar. Minha jornada
+                            começou em uma cozinha simples, com uma forma de plástico e muita vontade.</p>
+                        <p class="story-highlight">"Hoje meu propósito é pegar você pela mão e encurtar seu caminho.
+                            Você não precisa errar o que eu errei."</p>
+                        <p class="expert-signature">Gaby Bitencourt</p>
+                    </div>
                 </div>
 
                 <!-- 6. OFERTA CLARA E RÁPIDA -->
@@ -1322,118 +1331,7 @@
         </div>
     </div>
 
-    <!-- OFERTA DESBLOQUEADA (Aparece após o Quiz) -->
-    <section id="oferta-desbloqueada" class="hidden section-oferta-desbloqueada">
-        <div class="container">
-            <div class="quiz-result-screen"> <!-- Mantendo classe para aproveitar estilos -->
 
-                <!-- Resultado Personalizado -->
-                <div class="result-header">
-                    <span class="result-badge">ANÁLISE CONCLUÍDA</span>
-                    <h2 class="result-greeting">Parabéns, <span id="result-name">Maria</span>! 🎉</h2>
-                    <p class="result-intro">Com base no seu perfil, este é o seu potencial real para a Páscoa 2026:</p>
-                </div>
-
-                <div class="result-box glass-card highlight-border">
-                    <span class="result-label">Seu Lucro Estimado</span>
-                    <div class="result-value-wrapper">
-                        <span class="result-value" id="result-min">R$ 1.800</span>
-                        <span class="result-separator">a</span>
-                        <span class="result-value" id="result-max">R$ 4.200</span>
-                    </div>
-                    <span class="result-period">trabalhando nas horas vagas</span>
-                </div>
-
-                <p class="result-message">
-                    Detectamos que você tem o <strong>perfil ideal</strong> para o método:
-                    <span id="profile-summary-text">pouco investimento inicial e vontade de crescer.</span>
-                </p>
-
-                <div class="quiz-divider"></div>
-
-                <!-- Apresentação da Expert -->
-                <div class="expert-section glass-card">
-                    <div class="expert-content">
-                        <img src="assets/gaby_profile.webp" alt="Gaby Bitencourt" class="expert-photo">
-                        <div class="expert-bio">
-                            <h3>Prazer, sou Gaby Bitencourt 👩‍🍳</h3>
-                            <p>Comecei na cozinha da minha mãe, com uma forma de plástico e muita vontade sem dinheiro.
-                                Hoje ajudo mais de 5.000 mulheres a viverem de confeitaria.</p>
-                            <p><strong>Vou te pegar pela mão e te ensinar tudo o que sei.</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- A Oferta -->
-                <div class="offer-section-full">
-                    <div class="offer-header-lp">
-                        <h3 class="offer-title">O que você vai receber agora:</h3>
-                    </div>
-
-                    <div class="offer-grid">
-                        <div class="offer-card">
-                            <img src="assets/ovo_nutella.webp" alt="Ovo Gourmet" class="offer-img-mini">
-                            <h4>Apostila de Receitas Lucrativas</h4>
-                            <p>12 receitas campeãs de vendas. Custo baixo, lucro alto.</p>
-                        </div>
-                        <div class="offer-card">
-                            <img src="assets/producao_ovos_embalados.webp" alt="Produção" class="offer-img-mini">
-                            <h4>Produção Descomplicada</h4>
-                            <p>Aprenda a produzir em escala na sua cozinha, sem bagunça.</p>
-                        </div>
-                    </div>
-
-                    <!-- Bônus -->
-                    <div class="bonus-list glass-card">
-                        <span class="bonus-tag">🎁 BÔNUS EXCLUSIVOS (HOJE)</span>
-                        <ul>
-                            <li>
-                                <i class="ph ph-whatsapp-logo"></i>
-                                <div>
-                                    <strong>Pack de Scripts de Vendas</strong>
-                                    <span>Textos prontos para copiar e colar no WhatsApp</span>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-file-xls"></i>
-                                <div>
-                                    <strong>Calculadora Automática</strong>
-                                    <span>Nunca mais tenha prejuízo cobrando errado</span>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-instagram-logo"></i>
-                                <div>
-                                    <strong>Kit de Artes (Canva)</strong>
-                                    <span>Templates lindos para postar no Instagram</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Preço e CTA -->
-                    <div class="final-offer glass-card">
-                        <div class="offer-price-container">
-                            <span class="price-old">De <s>R$ 97,90</s> por apenas:</span>
-                            <h2 class="price-main">6x de R$ 5,32</h2>
-                            <span class="price-cash">ou R$ 27,00 à vista</span>
-                        </div>
-
-                        <a href="https://pay.cakto.com.br/f5isonf_753149"
-                            class="btn btn-primary btn-pulsing btn-large-cta" id="btn-checkout">
-                            <span>QUERO ACESSAR A FÓRMULA AGORA</span>
-                            <i class="ph ph-lock-key"></i>
-                        </a>
-
-                        <div class="guarantee-badge">
-                            <i class="ph ph-shield-check"></i>
-                            <span>Garantia de 7 Dias ou seu dinheiro de volta</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <script defer src="assets/js/pixel-events.js"></script>
     <script defer src="quiz.min.js"></script>
