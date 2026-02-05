@@ -217,7 +217,7 @@ class Quiz {
         let title = `Excelente ponto, ${this.userName}. 🤔`;
         let text = 'Sua rotina tem desafios reais, mas identificamos um padrão interessante: perfis como o seu tendem a ter resultados surpreendentes porque focam na QUALIDADE do tempo.';
         let testimonial = {
-            img: 'https://i.pravatar.cc/40?img=34',
+            img: 'assets/avatars/avatar-34.jpg',
             quote: '"Achei que minha rotina ia me impedir, mas descobri que precisava de 1h focada, não o dia todo. Foi libertador!"',
             author: '— Patrícia R.'
         };
@@ -226,7 +226,7 @@ class Quiz {
             title = `Sua força vem daí, ${this.userName} ❤️`;
             text = 'Muitas acham que filhos atrapalham, mas nossas alunas provam o contrário: eles são o MOTIVO. Você não precisa de "tempo sobrando", precisa de uma fórmula que respeite seus intervalos de mãe.';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=16',
+                img: 'assets/avatars/avatar-16.jpg',
                 quote: '"Faço nos horários de soneca e à noite. Cansativo? Sim. Mas pagar a escola deles à vista... não tem preço!"',
                 author: '— Amanda O.'
             };
@@ -234,7 +234,7 @@ class Quiz {
             title = `O tempo é seu ativo, ${this.userName} ⏳`;
             text = 'Quem trabalha fora tem uma vantagem secreta: Objetividade. Você não tem tempo a perder, e essa fórmula foi desenhada para render o triplo em 2 horas do que amadores fazem em 8h.';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=5',
+                img: 'assets/avatars/avatar-5.jpg',
                 quote: '"Chegava do trabalho e fazia 1h de produção focada. Fiz R$4.800 só nos fins de semana e noites. É método, não milagre."',
                 author: '— Carla M.'
             };
@@ -242,7 +242,7 @@ class Quiz {
             title = `Seu momento de virada, ${this.userName} 🌟`;
             text = 'Pode parecer difícil agora, mas você tem algo valioso: Foco Total. Enquanto outras dividem atenção, você pode mergulhar e dominar o mercado da sua região em semanas.';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=23',
+                img: 'assets/avatars/avatar-23.jpg',
                 quote: '"Estava no fundo do poço, devendo tudo. Peguei R$150 com medo. Hoje sustento a casa só com os doces. A Páscoa mudou minha vida."',
                 author: '— Fernanda L.'
             };
@@ -250,7 +250,7 @@ class Quiz {
             title = `Visão de Águia, ${this.userName} 🦅`;
             text = 'Você já sabe que renda depende de esforço inteligente. A "Fórmula Chocolate & Lucro" não é gasto, é uma nova linha de receita sazonal para injetar caixa rápido no seu negócio.';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=35',
+                img: 'assets/avatars/avatar-35.jpg',
                 quote: '"Integrei os ovos no meu salão e vendi para as clientes que já tinha. Dobrei meu faturamento de abril sem gastar com anúncio!"',
                 author: '— Juliana C.'
             };
@@ -273,7 +273,7 @@ class Quiz {
         let title = `Excelente localização, ${this.userName}!`;
         let text = 'Sua região tem um potencial incrível para vendas de ovos artesanais.';
         let testimonial = {
-            img: 'https://i.pravatar.cc/40?img=25',
+            img: 'assets/avatars/avatar-25.jpg',
             quote: '"Minha cidade é pequena, mas isso foi minha vantagem. Virei referência rapidinho!"',
             author: '— Sandra M., Interior de MG'
         };
@@ -282,7 +282,7 @@ class Quiz {
             title = `Sua cidade é uma mina de ouro, ${this.userName}! 🏆`;
             text = 'Cidades pequenas têm uma vantagem SECRETA: Menos concorrência + Boca a boca mais forte = Você pode dominar o mercado em semanas. Quem chega primeiro, fica com tudo!';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=25',
+                img: 'assets/avatars/avatar-25.jpg',
                 quote: '"Moro numa cidade de 15 mil habitantes. Na primeira Páscoa vendi pra 80 famílias. Hoje TODOS me conhecem como a \"moça do ovo\"."',
                 author: '— Sandra M., Interior de MG'
             };
@@ -290,7 +290,7 @@ class Quiz {
             title = `Equilíbrio perfeito, ${this.userName}! ⚡`;
             text = 'Cidades médias são o ponto ideal: Mercado grande o suficiente para crescer, mas pequeno o suficiente para você se destacar. Você pode construir uma marca forte rapidinho!';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=47',
+                img: 'assets/avatars/avatar-47.jpg',
                 quote: '"Minha cidade tem 80 mil habitantes. Comecei atendendo meu bairro, depois viralizei no WhatsApp. Fiz R$12.000 na última Páscoa!"',
                 author: '— Renata K., Itajubá/MG'
             };
@@ -298,7 +298,7 @@ class Quiz {
             title = `Mercado gigante te esperando, ${this.userName}! 🌆`;
             text = 'Cidade grande = Demanda infinita. Com a estratégia certa de nichos (escritórios, condomínios, igrejas), você pode criar uma clientela fiel que te garante vendas todo ano!';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=38',
+                img: 'assets/avatars/avatar-38.jpg',
                 quote: '"Mora numa cidade de 300 mil. Foquei em empresas e condomínios. Fechei encomendas de 50+ ovos por cliente. O lucro foi absurdo!"',
                 author: '— Patrícia F., Ribeirão Preto/SP'
             };
@@ -306,7 +306,7 @@ class Quiz {
             title = `Potencial ilimitado na sua mão, ${this.userName}! 🏙️`;
             text = 'Capitais têm um mercado ENORME para produtos artesanais premium. As pessoas pagam até 3x mais por algo feito com amor. Você tem milhões de potenciais clientes a poucos km!';
             testimonial = {
-                img: 'https://i.pravatar.cc/40?img=41',
+                img: 'assets/avatars/avatar-41.jpg',
                 quote: '"Moro em São Paulo. Achei que ia ter muita concorrência, mas o mercado é TÃO grande que vendi tudo antes da Páscoa. Fiz R$18.000 trabalhando de casa!"',
                 author: '— Juliana S., São Paulo/SP'
             };
@@ -329,35 +329,35 @@ class Quiz {
             'nao-vender': {
                 title: `Esse medo é um bom sinal, ${this.userName} �️`,
                 text: 'Ele mostra responsabilidade. Mas a verdade é que em tempos de crise, as pessoas cortam viagens, mas NÃO CORTAM o chocolate. A demanda reprimida para 2026 é gigante, e você só precisa estar posicionada.',
-                img: 'https://i.pravatar.cc/40?img=44',
+                img: 'assets/avatars/avatar-44.jpg',
                 quote: '"Eu tremia de medo de sobrar ovo. Segui o script de antecipação e vendi tudo ANTES de produzir. Fiquei chocada!"',
                 author: '— Luciana A.'
             },
             'nao-ficar-bom': {
                 title: `O perfeccionismo te protege, mas... `,
                 text: 'Entendo seu receio. A boa notícia? Confeitaria não é "dom", é química e processo. Se você sabe ler e seguir instruções, o resultado é matemático. Seus ovos VÃO ficar lindos porque a fórmula não deixa errar.',
-                img: 'https://i.pravatar.cc/40?img=36',
+                img: 'assets/avatars/avatar-36.jpg',
                 quote: '"Achava que tinha mão pesada. O guia de temperagem é tão visual que até minha filha de 10 anos conseguiu fazer casca brilhante!"',
                 author: '— Camila R.'
             },
             'nao-dar-conta': {
                 title: `Não tente ser a Mulher Maravilha ‍♀️`,
                 text: 'Você não precisa dar conta de tudo sozinha, só precisa de ORGANIZAÇÃO. A fórmula tem um Cronograma de Produção que te diz: "Hoje faça X, amanhã Y". Assim você produz muito sem virar noite.',
-                img: 'https://i.pravatar.cc/40?img=30',
+                img: 'assets/avatars/avatar-30.jpg',
                 quote: '"Com o calendário, parei de correr igual barata tonta. Trabalhei tranquila e ainda tive tempo pra família no domingo de Páscoa."',
                 author: '— Amanda O.'
             },
             'perder-dinheiro': {
                 title: `Vamos falar de Matemática, ${this.userName} 🧮`,
                 text: 'Medo financeiro se resolve com cálculo. Ovos artesanais têm margem de 300%. Se você vender 3 ovos, já paga o curso e os materiais iniciais. O resto é lucro puro. O risco é matematicamente quase zero.',
-                img: 'https://i.pravatar.cc/40?img=48',
+                img: 'assets/avatars/avatar-48.jpg',
                 quote: '"Morria de medo de investir. Comecei com 1 barra de chocolate. Vendi, comprei 2. Vendi, comprei 4. Transformei R$50 em R$3.000 em um mês."',
                 author: '— Fernanda L.'
             },
             'sem-medo': {
                 title: `Sua mentalidade já venceu 🏆`,
                 text: 'Quem elimina o medo da equação sai na frente de 99% das pessoas. Você tem a atitude certa. Agora só precisa da ferramenta certa (a Fórmula) para transformar essa coragem em dinheiro no bolso.',
-                img: 'https://i.pravatar.cc/40?img=35',
+                img: 'assets/avatars/avatar-35.jpg',
                 quote: '"Eu sabia que ia dar certo, só não sabia como. O curso foi o mapa do tesouro que eu precisava pra explodir de vender."',
                 author: '— Juliana C.'
             }
