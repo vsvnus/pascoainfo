@@ -263,11 +263,7 @@ h4 {
     align-items: center;
 }
 
-@media (min-width: 1024px) {
-    .hero .container {
-        grid-template-columns: 1.2fr 1fr;
-    }
-}
+
 
 .hero-content {
     text-align: center;
@@ -279,13 +275,7 @@ h4 {
     /* Ensures it takes full width for centering to work effectively */
 }
 
-@media (min-width: 1024px) {
-    .hero-content {
-        text-align: left;
-        align-items: flex-start;
-        /* Resets to left align for desktop */
-    }
-}
+
 
 .social-proof-badge {
     display: inline-flex;
@@ -308,11 +298,7 @@ h4 {
     margin: 0 auto var(--space-md);
 }
 
-@media (min-width: 1024px) {
-    .hero-logo {
-        margin: 0 0 var(--space-md) 0;
-    }
-}
+
 
 .social-proof-badge i {
     color: var(--color-primary);
