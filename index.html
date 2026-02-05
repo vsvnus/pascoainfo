@@ -98,11 +98,300 @@
     <link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/Outfit.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Font: Phosphor Icons -->
-    <link rel="preload" href="assets/icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="assets/icons.css">
-    </noscript>
+    <style>
+        @font-face {
+            font-family: "Phosphor";
+            src: url("assets/icons/Phosphor.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .ph {
+            font-family: "Phosphor" !important;
+            display: inline-block;
+            line-height: 1;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .ph.ph-arrow-right:before {
+            content: "\e95c";
+        }
+
+        .ph.ph-arrows-left-right:before {
+            content: "\e966";
+        }
+
+        .ph.ph-baby:before {
+            content: "\e98b";
+        }
+
+        .ph.ph-battery-low:before {
+            content: "\e9a0";
+        }
+
+        .ph.ph-book-open-text:before {
+            content: "\e9c8";
+        }
+
+        .ph.ph-briefcase:before {
+            content: "\e9d4";
+        }
+
+        .ph.ph-buildings:before {
+            content: "\e9dd";
+        }
+
+        .ph.ph-calculator:before {
+            content: "\e9e2";
+        }
+
+        .ph.ph-calendar:before {
+            content: "\e9e3";
+        }
+
+        .ph.ph-calendar-check:before {
+            content: "\e9e5";
+        }
+
+        .ph.ph-caret-down:before {
+            content: "\e9fe";
+        }
+
+        .ph.ph-chart-bar:before {
+            content: "\ea17";
+        }
+
+        .ph.ph-chart-line-up:before {
+            content: "\ea1c";
+        }
+
+        .ph.ph-check:before {
+            content: "\ea30";
+        }
+
+        .ph.ph-check-circle:before {
+            content: "\ea31";
+        }
+
+        .ph.ph-circle-notch:before {
+            content: "\ea3b";
+        }
+
+        .ph.ph-clipboard-text:before {
+            content: "\ea41";
+        }
+
+        .ph.ph-clock:before {
+            content: "\ea42";
+        }
+
+        .ph.ph-coin:before {
+            content: "\ea5e";
+        }
+
+        .ph.ph-coins:before {
+            content: "\ea5f";
+        }
+
+        .ph.ph-currency-dollar:before {
+            content: "\ea80";
+        }
+
+        .ph.ph-file-xls:before {
+            content: "\eb03";
+        }
+
+        .ph.ph-hand-coins:before {
+            content: "\eb73";
+        }
+
+        .ph.ph-hand-heart:before {
+            content: "\eb77";
+        }
+
+        .ph.ph-hourglass:before {
+            content: "\eb94";
+        }
+
+        .ph.ph-hourglass-high:before {
+            content: "\eb95";
+        }
+
+        .ph.ph-hourglass-low:before {
+            content: "\eb96";
+        }
+
+        .ph.ph-hourglass-medium:before {
+            content: "\eb97";
+        }
+
+        .ph.ph-house:before {
+            content: "\eb9c";
+        }
+
+        .ph.ph-house-line:before {
+            content: "\eb9d";
+        }
+
+        .ph.ph-instagram-logo:before {
+            content: "\eba8";
+        }
+
+        .ph.ph-lightbulb:before {
+            content: "\ebba";
+        }
+
+        .ph.ph-lock-key:before {
+            content: "\ebd3";
+        }
+
+        .ph.ph-lock-key-open:before {
+            content: "\ebd4";
+        }
+
+        .ph.ph-magnifying-glass:before {
+            content: "\ebdd";
+        }
+
+        .ph.ph-map-pin:before {
+            content: "\ebe0";
+        }
+
+        .ph.ph-medal:before {
+            content: "\ebe8";
+        }
+
+        .ph.ph-megaphone:before {
+            content: "\ebeb";
+        }
+
+        .ph.ph-money:before {
+            content: "\ebfb";
+        }
+
+        .ph.ph-newspaper:before {
+            content: "\ec0e";
+        }
+
+        .ph.ph-piggy-bank:before {
+            content: "\ec76";
+        }
+
+        .ph.ph-prohibit:before {
+            content: "\ec94";
+        }
+
+        .ph.ph-rocket-launch:before {
+            content: "\ecb6";
+        }
+
+        .ph.ph-shield-check:before {
+            content: "\ecd3";
+        }
+
+        .ph.ph-shield-warning:before {
+            content: "\ecd9";
+        }
+
+        .ph.ph-star:before {
+            content: "\ed28";
+        }
+
+        .ph.ph-storefront:before {
+            content: "\ed34";
+        }
+
+        .ph.ph-thumbs-down:before {
+            content: "\ed71";
+        }
+
+        .ph.ph-tree:before {
+            content: "\ed8d";
+        }
+
+        .ph.ph-trend-up:before {
+            content: "\ed92";
+        }
+
+        .ph.ph-user:before {
+            content: "\eda0";
+        }
+
+        .ph.ph-users:before {
+            content: "\edab";
+        }
+
+        .ph.ph-users-three:before {
+            content: "\edae";
+        }
+
+        .ph.ph-wallet:before {
+            content: "\edbd";
+        }
+
+        .ph.ph-warning:before {
+            content: "\edbf";
+        }
+
+        .ph.ph-warning-circle:before {
+            content: "\edc0";
+        }
+
+        .ph.ph-whatsapp-logo:before {
+            content: "\edce";
+        }
+
+        .ph.ph-x:before {
+            content: "\eddb";
+        }
+
+        .ph.ph-city:before {
+            content: "\e9db";
+        }
+
+        .ph.ph-money-wavy:before {
+            content: "\ebfc";
+        }
+
+        .ph.ph-storefront-slash:before {
+            content: "\ed35";
+        }
+
+        .ph.ph-user-circle-check:before {
+            content: "\eda2";
+        }
+
+        .ph.ph-circle:before {
+            content: "\ea34";
+        }
+
+        .btn-pulsing {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(107, 45, 91, 0.7);
+            }
+
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(107, 45, 91, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(107, 45, 91, 0);
+            }
+        }
+    </style>
     <!-- CSS: Deferred loading for non-critical sections -->
     <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="quiz-core.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
