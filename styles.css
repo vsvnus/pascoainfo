@@ -1204,16 +1204,12 @@ body {
     }
 
     .hero-content {
-        transform: translateX(-32px);
-        /* Nudge ainda maior para a esquerda solicitado para iPhone */
-        width: calc(100% + 32px);
+        width: 100%;
     }
 
     .hero-logo {
         max-width: 180px;
         margin-bottom: 0.75rem !important;
-        transform: translateX(4px);
-        /* Contra-nudge na logo se necessário, mas mantendo a tendência */
     }
 
     .hero-headline {
