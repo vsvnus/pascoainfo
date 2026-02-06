@@ -750,8 +750,7 @@
                         </div>
                     </div>
 
-                    <a href="https://pay.cakto.com.br/f5isonf_753149" class="btn btn-primary btn-mega-cta"
-                        id="btn-checkout-final">
+                    <a href="javascript:void(0)" class="btn btn-primary btn-mega-cta" id="btn-checkout-final">
                         <span>QUERO ACESSAR O MÉTODO AGORA</span>
                         <i class="ph ph-lock-key"></i>
                     </a>
@@ -1814,10 +1813,12 @@
                 }
             });
 
-            confirmBtn.addEventListener('click', () => {
-                if (checkbox.checked) {
-                    // Tracking opcional aqui se necessário
-                    window.location.href = checkoutBtn.href;
+            confirmBtn.addEventListener('click', (e) => {
+                if (!checkbox.checked) {
+                    e.preventDefault();
+                } else {
+                    // GA4 Tracking se necessário
+                    console.log("🚀 Redirecionando para checkout...");
                 }
             });
 
@@ -1856,7 +1857,8 @@
                     <input type="checkbox" id="check-vaga">
                     <span>Confirmo que quero minha vaga nesta turma</span>
                 </label>
-                <button id="btn-modal-confirm" class="btn-modal-confirm">GARANTIR MINHA VAGA</button>
+                <a href="https://pay.cakto.com.br/f5isonf_753149" id="btn-modal-confirm"
+                    class="btn-modal-confirm">GARANTIR MINHA VAGA</a>
             </div>
         </div>
     </div>
