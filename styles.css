@@ -1204,9 +1204,9 @@ body {
     }
 
     .hero-content {
-        transform: translateX(-16px);
-        /* Nudge maior para a esquerda solicitado */
-        width: calc(100% + 16px);
+        transform: translateX(-32px);
+        /* Nudge ainda maior para a esquerda solicitado para iPhone */
+        width: calc(100% + 32px);
     }
 
     .hero-logo {
@@ -1408,39 +1408,42 @@ body {
 
 @media (max-width: 480px) {
     .modal-vaga {
-        padding: 1rem;
-        max-width: 88%;
+        padding: 0.85rem;
+        max-width: 310px;
+        /* Largura fixa para iPhones menores */
+        -webkit-text-size-adjust: 100%;
+        margin-bottom: env(safe-area-inset-bottom);
     }
 
     .modal-header {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
     }
 
     .modal-header h2 {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .modal-alert {
-        padding: 0.5rem;
-        font-size: 0.8rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.3;
+        padding: 0.4rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
     }
 
     .modal-points {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
     }
 
     .modal-points li {
-        font-size: 0.8rem;
-        padding: 0.25rem 0;
-        gap: 0.5rem;
+        font-size: 0.75rem;
+        padding: 0.2rem 0;
+        gap: 0.4rem;
     }
 
     .checkbox-rule {
-        font-size: 0.8rem;
-        padding: 0.25rem;
-        gap: 0.5rem;
+        font-size: 0.75rem;
+        padding: 0.2rem;
+        gap: 0.4rem;
     }
 
     .checkbox-rule input {
@@ -1449,7 +1452,7 @@ body {
     }
 
     .btn-modal-confirm {
-        padding: 0.75rem;
-        font-size: 0.9rem;
+        padding: 0.7rem;
+        font-size: 0.850rem;
     }
 }
