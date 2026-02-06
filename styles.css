@@ -1211,11 +1211,15 @@ body {
     .hero-content {
         width: 100%;
         margin: 0 auto;
+        transform: none;
+        /* Reset total */
     }
 
     .hero-logo {
         max-width: 180px;
-        margin-bottom: 0.75rem !important;
+        margin: 0 auto 0.75rem !important;
+        margin-left: calc(50% - 90px - 15px) !important;
+        /* Ajuste fino: 50% - metade da largura - compensação coelho */
     }
 
     .hero-headline {

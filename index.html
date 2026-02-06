@@ -138,9 +138,12 @@
 
             .hero-logo {
                 max-width: 180px;
-                margin-bottom: 0.75rem;
-                margin-left: auto;
-                margin-right: auto;
+                margin: 0 auto 0.75rem !important;
+                margin-left: -15px !important;
+                /* Puxa o coelho para fora da margem central */
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
             }
 
             .hero-headline {
