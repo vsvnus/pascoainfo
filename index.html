@@ -1790,8 +1790,76 @@
         document.addEventListener('DOMContentLoaded', () => {
             startStickyCountdown();
             startEasterCountdown();
+            initVagaModal();
         });
+
+        function initVagaModal() {
+            const checkoutBtn = document.getElementById('btn-checkout-final');
+            const modal = document.getElementById('modal-vaga');
+            const checkbox = document.getElementById('check-vaga');
+            const confirmBtn = document.getElementById('btn-modal-confirm');
+
+            if (!checkoutBtn || !modal || !checkbox || !confirmBtn) return;
+
+            checkoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
+
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    confirmBtn.classList.add('ready');
+                } else {
+                    confirmBtn.classList.remove('ready');
+                }
+            });
+
+            confirmBtn.addEventListener('click', () => {
+                if (checkbox.checked) {
+                    // Tracking opcional aqui se necessário
+                    window.location.href = checkoutBtn.href;
+                }
+            });
+
+            // Fechar modal ao clicar fora
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        }
     </script>
+
+    <!-- MODAL CONFIRMAÇÃO DE VAGA -->
+    <div id="modal-vaga" class="modal-overlay">
+        <div class="modal-vaga glass-card">
+            <div class="modal-header">
+                <h2>🔒 Confirmação de Vaga</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-alert">
+                    O site está recebendo um alto volume de acessos neste momento. Precisamos dessa confirmação para
+                    gerenciamento das vagas.<br><br>
+                    <strong>Esta é a última turma antes da Páscoa de 2026.</strong>
+                </div>
+                <p style="margin-bottom: 15px; font-weight: 600; font-family: var(--font-display);">Ao confirmar, você
+                    garante:</p>
+                <ul class="modal-points">
+                    <li><i class="ph ph-arrow-right"></i><span>Acesso imediato ao método completo</span></li>
+                    <li><i class="ph ph-arrow-right"></i><span>Todas as receitas testadas e aprovadas</span></li>
+                    <li><i class="ph ph-arrow-right"></i><span>Planilha de organização e precificação</span></li>
+                    <li><i class="ph ph-arrow-right"></i><span>Suporte até a Páscoa</span></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <label class="checkbox-rule">
+                    <input type="checkbox" id="check-vaga">
+                    <span>Confirmo que quero minha vaga nesta turma</span>
+                </label>
+                <button id="btn-modal-confirm" class="btn-modal-confirm">GARANTIR MINHA VAGA</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Partytown: Tracking em Thread Separada (Web Worker) -->
     <script>
