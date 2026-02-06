@@ -1408,10 +1408,40 @@ body {
 
 @media (max-width: 480px) {
     .modal-vaga {
-        padding: var(--space-xl);
+        padding: var(--space-lg);
+        max-width: 92%;
+    }
+
+    .modal-header {
+        margin-bottom: var(--space-md);
     }
 
     .modal-header h2 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
+    }
+
+    .modal-alert {
+        padding: var(--space-sm);
+        font-size: 0.85rem;
+        margin-bottom: var(--space-md);
+    }
+
+    .modal-points {
+        margin-bottom: var(--space-lg);
+    }
+
+    .modal-points li {
+        font-size: 0.85rem;
+        padding: 0.35rem 0;
+    }
+
+    .checkbox-rule {
+        font-size: 0.85rem;
+        padding: 0.35rem;
+    }
+
+    .btn-modal-confirm {
+        padding: 0.9rem;
+        font-size: 1rem;
     }
 }
